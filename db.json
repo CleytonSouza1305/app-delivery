@@ -1,0 +1,38 @@
+{
+"restaurants": [
+    {
+        "id": 1,
+        "name": "Resturante A",
+        "category": ["fast-food", "comida"],
+        "menu": [
+            {
+                "id": 1,
+                "name": "Pizza",
+                "price": 18.99
+            },
+            {
+                "id": 2,
+                "name": "Hamburguer",
+                "price": 18.99
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "name": "Resturante B",
+        "category": ["sushi"],
+        "menu": [
+            {
+                "id": 1,
+                "name": "Sushi",
+                "price": 29.99
+            },
+            {
+                "id": 2,
+                "name": "Tempura",
+                "price": 25.00
+            }
+        ]
+    }
+]
+}

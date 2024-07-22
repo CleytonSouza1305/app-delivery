@@ -1,0 +1,32 @@
+body {
+  height: 100vh;
+  width: 100vw;
+  background-color: #f4f5f6;
+  overflow: hidden;
+  position: relative;
+}
+
+.image-loop {
+  height: 100%;
+  width: 100%;
+  background-image: url('../imgs/food-loop-1.jfif');
+  background-position: center center;
+  background-size: cover;
+  position: relative;
+}
+
+.image-loop::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(-90deg, rgb(0, 0, 0, 0.7), rgb(0, 0, 0, 0.5), rgb(0, 0, 0, 0.3));
+}
+
+main {
+  position: absolute;
+  top: 0;
+  z-index: 10;
+}
