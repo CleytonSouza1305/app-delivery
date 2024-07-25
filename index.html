@@ -6,13 +6,51 @@
 
   <link rel="stylesheet" href="./src/css/global.css">
   <link rel="stylesheet" href="./src/css/index.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
   <title>The Better Food</title>
 </head>
 <body>
   <div class="image-loop"></div>
   <main>
     <div class="content">
-      <h2>Login</h2>
+      <div class="header-logo">
+        <div class="logo">
+          <h1>The Better Food</h1>
+        </div>
+        <span>|</span>
+        <h2>Login</h2>
+      </div>
+
+      <div class="bottom-group">
+        <div class="input-group">
+          <label for="email-input">Email:</label>
+          <input type="text" id="email-input" autocomplete="off">
+        </div>
+        
+        <div class="input-group">
+          <label for="password-input">Senha:</label>
+          <input type="password" id="password-input" autocomplete="off" class="password-input">
+          <i class="fa-solid fa-eye icon-eye"></i>
+        </div>
+
+        <div class="input-group display">
+          <label for="confirm-password-input">Confirm:</label>
+          <input type="password" id="confirm-password-input" autocomplete="off" class="password-input">
+          <i class="fa-solid fa-eye icon-eye"></i>
+        </div>
+
+        <div class="have-account">
+          <p>Não possui uma conta? <span class="create-account">Criar conta!</span></p>
+        </div>
+
+        <div class="error-div display">
+          <p class="error-text">Erro ao acessar sua conta, há informações divergentes</p>
+        </div>
+        <div class="button-div">
+          <button type="button">Entrar</button>
+        </div>
+      </div>
     </div>
   </main>
 
