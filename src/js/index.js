@@ -22,7 +22,7 @@ async function renderDataUser() {
 
           const h2 = document.querySelector('h2')
 
-          h2.textContent('Criar')
+          h2.textContent = 'Register'
         } else {
           alert('proxima pagina...')
         }
