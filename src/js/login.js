@@ -1,4 +1,4 @@
-import { emailRegex, passwordRegex } from "./regexs.js";
+import { cpfValidate, emailRegex, passwordRegex } from "./regexs.js";
 
 let value = 0;
 
@@ -151,10 +151,12 @@ loopImageBg()
 
 function validateForm() {
   const emailInput = document.getElementById('email-input')
-  emailRegex(emailInput)
+  emailRegex(emailInput.value)
 
   const passwordInput = document.getElementById('password-input')
-  passwordRegex(passwordInput)
+  passwordRegex(passwordInput.value)
+
+  cpfValidate()
 }
 
 validateForm()

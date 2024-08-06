@@ -19,3 +19,26 @@ export function passwordRegex(text) {
     return false
   }
 }
+
+export function cpfValidate() {
+  const cpfInput = document.getElementById('cpf-input')
+  cpfInput.addEventListener('input', (el) => {
+    let finalCpf = ''
+    let input = el.target
+    if (input.value.length === 3) {
+      finalCpf = input.value + '.'
+      input.value = finalCpf
+    }
+    if (input.value.length === 7) {
+      finalCpf = input.value + '.'
+      input.value = finalCpf
+    }
+    if (input.value.length === 11) {
+      finalCpf = input.value + '-'
+      input.value = finalCpf
+    }
+    if (input.value.length > 14) {
+      input.value = input.value.substring(0, 14)
+    }
+  })
+}
