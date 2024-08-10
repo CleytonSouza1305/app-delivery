@@ -1,4 +1,4 @@
-import { emailRegex, passwordRegex } from "./regexs.js";
+import { addressValidade, formatcpf, emailRegex, nameValidate, passwordRegex, validateCpf } from "./regexs.js";
 
 let value = 0;
 
@@ -26,7 +26,6 @@ async function renderDataUser() {
   });
 
   if (userFound) {
-
     emailInput.value = ''
     passwordInput.value = ''
     alert('Próxima página...');
@@ -144,17 +143,39 @@ function loopImageBg() {
     
   }, 1000 * 10)
 }
-
 switchViewPassword()
-renderDataUser()
 loopImageBg()
 
 function validateForm() {
-  const emailInput = document.getElementById('email-input')
-  emailRegex(emailInput)
+  const createAccountBtn = document.getElementById('access-acount-btn')
+  createAccountBtn.addEventListener('click', (el) => {
+    const element = el.target
+    if (element.type === 'submit') {
+      const emailInput = document.getElementById('email-input')
+      const emailElement = emailRegex(emailInput.value)
 
-  const passwordInput = document.getElementById('password-input')
-  passwordRegex(passwordInput)
+      const passwordInput = document.getElementById('password-input')
+      const passwordElement = passwordRegex(passwordInput.value)
+
+      const name = document.getElementById('name-input')
+      const nameElement = nameValidate(name.value)
+
+      const addressInput = document.getElementById('address')
+      const addressElement = addressValidade(addressInput.value)
+
+      const cpfInput = document.getElementById('cpf-input')
+      const cpfElement = validateCpf(cpfInput.value)
+
+      if (emailElement && passwordElement && cpfElement && nameElement && addressElement) {
+        alert('ok')
+      } else {
+        alert('err')
+      }
+    }
+  })
+  formatcpf()
 }
-
 validateForm()
+
+
+renderDataUser()
