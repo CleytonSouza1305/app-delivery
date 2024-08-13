@@ -179,6 +179,49 @@ label {
   width: 200px;
 }
 
+#success-loader {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 20px;
+  z-index: 1000;
+  border: inset 2px #000;
+}
+
+.loader-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.circular-loader {
+  width: 80px;
+  height: 80px;
+  border: 5px solid rgba(0, 0, 0, 0.1); /* Borda externa */
+  border-top: 5px solid green; /* Cor da borda animada */
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.loader-icon {
+  font-size: 36px;
+  color: green;
+}
+
 .display {
   display: none;
 }

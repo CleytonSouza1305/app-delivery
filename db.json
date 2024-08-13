@@ -1,46 +1,53 @@
 {
-"user": [
+  "user": [
     {
-        "id": 1,
-        "email": "bigcleyton@gmail.com",
-        "password": "teste123",
-        "name": "Cleyton"
+      "id": 1,
+      "name": "Cleyton",
+      "email": "bigcleyton@gmail.com",
+      "password": "teste123",
+      "cpf": "999.999.999-99",
+      "address": "a"
     }
   ],
-"restaurants": [
+  "restaurants": [
     {
-        "id": 1,
-        "name": "Resturante A",
-        "category": ["fast-food", "comida"],
-        "menu": [
-            {
-                "id": 1,
-                "name": "Pizza",
-                "price": 18.99
-            },
-            {
-                "id": 2,
-                "name": "Hamburguer",
-                "price": 18.99
-            }
-        ]
+      "id": 1,
+      "name": "Resturante A",
+      "category": [
+        "fast-food",
+        "comida"
+      ],
+      "menu": [
+        {
+          "id": 1,
+          "name": "Pizza",
+          "price": 18.99
+        },
+        {
+          "id": 2,
+          "name": "Hamburguer",
+          "price": 18.99
+        }
+      ]
     },
     {
-        "id": 2,
-        "name": "Resturante B",
-        "category": ["sushi"],
-        "menu": [
-            {
-                "id": 1,
-                "name": "Sushi",
-                "price": 29.99
-            },
-            {
-                "id": 2,
-                "name": "Tempura",
-                "price": 25.00
-            }
-        ]
+      "id": 2,
+      "name": "Resturante B",
+      "category": [
+        "sushi"
+      ],
+      "menu": [
+        {
+          "id": 1,
+          "name": "Sushi",
+          "price": 29.99
+        },
+        {
+          "id": 2,
+          "name": "Tempura",
+          "price": 25
+        }
+      ]
     }
-]
+  ]
 }
