@@ -167,15 +167,29 @@ function validateForm() {
       const cpfElement = validateCpf(cpfInput.value)
 
       if (emailElement && passwordElement && cpfElement && nameElement && addressElement) {
-        alert('ok')
+        const errorDiv = document.querySelector('.error-div')
+        errorDiv.classList.add('display')
       } else {
-        alert('err')
+        const errorDiv = document.querySelector('.error-div')
+        errorDiv.classList.remove('display')
+        const errorText = document.querySelector('.error-text')
+        errorText.textContent = 'Faltam informações corretas'
+
+        const inputList = document.querySelectorAll('input')
+        inputList.forEach((el) => {
+          if (el.classList.contains('false')) {
+            el.style.border = '2px solid #EA1D2C'
+            el.addEventListener('input', () => {
+              el.style.removeProperty('border')
+            })
+          } 
+        })
       }
     }
   })
   formatcpf()
 }
+
+
 validateForm()
-
-
 renderDataUser()
