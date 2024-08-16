@@ -7,7 +7,6 @@ async function renderDataUser() {
 
   try {
     const data = await fetch(url).then((response) => response.json());
-    console.log(data);
 
     const enterButton = document.getElementById('access-acount-btn');
 
@@ -23,6 +22,7 @@ async function renderDataUser() {
 
       data.forEach((user) => {
         if (user.email === emailInput.value && user.password === passwordInput.value) {
+          localStorage.setItem('id', user.id)
           userFound = true;
         }
       });
@@ -30,7 +30,7 @@ async function renderDataUser() {
       if (userFound) {
         emailInput.value = '';
         passwordInput.value = '';
-        alert('Próxima página...');
+        window.location.href = 'src/pages/home.html'
       } else {
         if (enterButton.type === 'button') {
           value++;
@@ -200,10 +200,11 @@ async function createUser(nameValue, emailValue, passwordValue, cpfValue, addres
     .then((res) => res.json());
 
   const lastId = users.length > 0 ? users[users.length - 1].id : 0;
+  Number(lastId)
   const id = lastId + 1;
 
   const newUser = {
-    id,
+    id: id,
     name: nameValue,
     email: emailValue,
     password: passwordValue,
@@ -224,7 +225,9 @@ async function createUser(nameValue, emailValue, passwordValue, cpfValue, addres
     loader.classList.remove('display');
     setTimeout(() => {
       loader.classList.add('display');
-    }, 1000 * 10);
+    }, 1000 * 30);
+    localStorage.setItem('id', id)
+    window.location.href = 'src/pages/home.html'
   } else {
     console.error('Erro ao criar a conta:', response.status, response.statusText);
   }

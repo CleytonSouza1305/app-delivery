@@ -1,17 +1,25 @@
 {
   "user": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Cleyton",
       "email": "bigcleyton@gmail.com",
-      "password": "teste123",
-      "cpf": "999.999.999-99",
+      "password": "123qAA##aa",
+      "cpf": "222.222.222-22",
+      "address": "a"
+    },
+    {
+      "id": "2",
+      "name": "Raissa",
+      "email": "raissa@gmail.com",
+      "password": "1212AAA%%%a",
+      "cpf": "111.111.111-11",
       "address": "a"
     }
   ],
   "restaurants": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Resturante A",
       "category": [
         "fast-food",
@@ -31,7 +39,7 @@
       ]
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Resturante B",
       "category": [
         "sushi"
