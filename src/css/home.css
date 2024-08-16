@@ -1,0 +1,55 @@
+:root  {
+  --principal-color: #EA1D2C;
+  --primary-color: #f4f5f6;
+  --secundary-color: #272727;
+  --animed-transition: ease-in-out 200ms;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--primary-color);
+  padding: 0 5rem; 
+  color: var(--secundary-color);
+}
+
+#promotional-banner {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+#promotional-banner #banner-image {
+  border-radius: 6px;
+  width: 600px;
+  height: 250px;
+  cursor: pointer;
+  transition: var(--animed-transition);
+}
+
+#promotional-banner #banner-image:hover {
+  transform: rotate(1deg) scale(1.1);
+}
+
+.arrows {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  border: 3px solid var(--secundary-color);
+  border-radius: 50%;
+  cursor: pointer;
+  padding: 1.5rem;
+}
+
+#left-image {
+  margin-left: 6rem;
+}
+
+#right-image {
+  margin-right: 6rem;
+}
