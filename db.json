@@ -19,8 +19,9 @@
   ],
   "restaurants": [
     {
-      "id": "1",
-      "name": "Resturante A",
+      "id": 1,
+      "restaurantPhoto": "https://mercadoeconsumo.com.br/wp-content/uploads/2020/12/Bk-foto-2.jpg",
+      "name": "Burger King",
       "category": [
         "fast-food",
         "comida"
@@ -39,8 +40,49 @@
       ]
     },
     {
-      "id": "2",
-      "name": "Resturante B",
+      "id": 2,
+      "restaurantPhoto": "https://content.portaldofranchising.com.br/wp-content/uploads/2016/03/08105636/sushijapa3.jpg",
+      "name": "SushiJapa",
+      "category": [
+        "sushi"
+      ],
+      "menu": [
+        {
+          "id": 1,
+          "name": "Sushi",
+          "price": 29.99
+        },
+        {
+          "id": 2,
+          "name": "Tempura",
+          "price": 25
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "restaurantPhoto": "https://m.galeriadaarquitetura.com.br/Img//projeto/702x415/2615/restaurante-orgaz132.jpg",
+      "name": "Resturante C",
+      "category": [
+        "sushi"
+      ],
+      "menu": [
+        {
+          "id": 1,
+          "name": "Sushi",
+          "price": 29.99
+        },
+        {
+          "id": 2,
+          "name": "Tempura",
+          "price": 25
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "restaurantPhoto": "https://media-cdn.tripadvisor.com/media/photo-s/1c/5f/18/e3/fachada-do-restaurante.jpg",
+      "name": "Resturante D",
       "category": [
         "sushi"
       ],

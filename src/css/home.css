@@ -40,7 +40,8 @@ body {
   align-items: center;
   justify-content: center;
   font-size: 1.5rem;
-  border: 3px solid var(--secundary-color);
+  font-weight: bold;
+  border: 4px solid var(--secundary-color);
   border-radius: 50%;
   cursor: pointer;
   padding: 1.5rem;
@@ -52,4 +53,41 @@ body {
 
 #right-image {
   margin-right: 6rem;
+}
+
+.ul-nav-principal {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+  padding: 0 10rem;
+}
+
+.ul-nav-principal li a {
+  font-weight: 700;
+  padding: 1rem 0.5rem;
+  position: relative;
+}
+
+.ul-nav-principal li a i {
+  margin-left: 0.5rem;
+}
+
+.ul-nav-principal li a::after {
+  content: ''; 
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0; 
+  height: 5px; 
+  background-color: var(--principal-color); 
+  transition: width 0.4s ease; 
+}
+
+.ul-nav-principal li a:hover::after {
+  width: 100%; 
+}
+
+.display {
+  display: none;
 }
