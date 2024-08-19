@@ -2,6 +2,7 @@
   --principal-color: #EA1D2C;
   --primary-color: #f4f5f6;
   --secundary-color: #272727;
+  --green-color: #24d92a;
   --animed-transition: ease-in-out 200ms;
 }
 
@@ -90,4 +91,14 @@ body {
 
 .display {
   display: none;
+}
+
+.open {
+  color: var(--green-color);
+  font-weight: 700;
+}
+
+.close {
+  color: var(--principal-color);
+  font-weight: 700;
 }

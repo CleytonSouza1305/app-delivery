@@ -4,7 +4,6 @@ async function randomRestaurantSlider() {
 
   try {
     const container = document.querySelector('.restaunrant-content-slider')
-    console.log(container);
     
       for (let i = 0; i < data.length; i++) {
         const card = document.createElement('div')
@@ -30,7 +29,29 @@ async function randomRestaurantSlider() {
           categoryDiv.append(p)
         }
 
-        card.append(restaurantImage, restaunrantName, categoryDiv)
+        const funcionamentDiv = document.createElement('div')
+        const textP = document.createElement('p')
+
+        if (data[i].isOpen === true) {
+          textP.textContent = 'Aberto'
+          textP.classList.remove('close')
+          textP.classList.add('open')
+          houer.classList.remove('close')
+          houer.classList.add('open')
+        } else {
+          textP.textContent = 'Fechado'
+          textP.classList.remove('open')
+          textP.classList.add('close')
+          houer.classList.remove('open')
+          houer.classList.add('close')
+        }
+
+        const houer = document.createElement('p')
+        houer.textContent = data[i].openHouer + 'h - ' + data[i].closeHouer + 'h'
+
+        funcionamentDiv.append(textP, houer)
+
+        card.append(restaurantImage, restaunrantName, funcionamentDiv, categoryDiv)
         container.append(card)
     }
   } catch (e) { 

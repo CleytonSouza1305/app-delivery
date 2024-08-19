@@ -26,6 +26,9 @@
         "fast-food",
         "comida"
       ],
+      "isOpen": false,
+      "openHouer": 9,
+      "closeHouer": 22,
       "menu": [
         {
           "id": 1,
@@ -46,6 +49,9 @@
       "category": [
         "sushi"
       ],
+      "isOpen": false,
+      "openHouer": 9,
+      "closeHouer": 22,
       "menu": [
         {
           "id": 1,
@@ -66,6 +72,9 @@
       "category": [
         "sushi"
       ],
+      "isOpen": true,
+      "openHouer": 9,
+      "closeHouer": 22,
       "menu": [
         {
           "id": 1,
@@ -86,6 +95,9 @@
       "category": [
         "sushi"
       ],
+      "isOpen": false,
+      "openHouer": 9,
+      "closeHouer": 22,
       "menu": [
         {
           "id": 1,
