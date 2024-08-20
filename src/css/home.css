@@ -117,6 +117,12 @@ display: none;
   text-align: center;
   scroll-snap-align: start;
   flex: 0 0 auto; 
+  cursor: pointer;
+  transition: var(--animed-transition);
+}
+
+.card:hover {
+  transform: scale(1.1);
 }
 
 

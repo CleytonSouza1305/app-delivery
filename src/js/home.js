@@ -6,6 +6,7 @@ async function randomRestaurantSlider() {
     const container = document.querySelector('.restaunrant-content-slider')
     
       for (let i = 0; i < 8; i++) {
+
         const card = document.createElement('div')
         card.classList.add('card')
         card.id = data[i].id
@@ -37,7 +38,9 @@ async function randomRestaurantSlider() {
         houer.textContent = data[i].openHour + 'h - ' + data[i].closeHour + 'h'
         houer.classList.add('houer-restaurant')
 
-        if (data[i].isOpen === true) {
+        const currentDate = new Date().getHours()
+
+        if (currentDate > data[i].openHour && currentDate < data[i].closeHour) {
           textP.textContent = 'Aberto'
           textP.classList.remove('close')
           textP.classList.add('open')
