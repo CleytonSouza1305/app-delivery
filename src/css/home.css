@@ -2,7 +2,7 @@
   --principal-color: #EA1D2C;
   --primary-color: #f4f5f6;
   --secundary-color: #272727;
-  --green-color: #24d92a;
+  --green-color: #28a745;
   --animed-transition: ease-in-out 200ms;
 }
 
@@ -20,6 +20,7 @@ body {
   align-items: center;
   justify-content: space-between;
   overflow: hidden;
+  margin-bottom: 1rem;
 }
 
 #promotional-banner #banner-image {
@@ -89,6 +90,102 @@ body {
   width: 100%; 
 }
 
+.restaunrant-content-slider {
+  scroll-behavior: smooth;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+  scroll-snap-type: x mandatory; 
+  overflow-x: auto;
+  width: 100%;
+  -ms-overflow-style: none; 
+  scrollbar-width: none; 
+}
+
+.restaurant-content-slider::-webkit-scrollbar {
+display: none; 
+}
+
+.card {
+  width: 200px;
+  height: 270px;
+  overflow: hidden;
+  box-shadow: inset 0 0 3px 1px var(--secundary-color);
+  padding: 2rem 1rem;
+  border-radius: 4px;
+  text-align: center;
+  scroll-snap-align: start;
+  flex: 0 0 auto; 
+}
+
+
+.card img {
+  width: 100%;
+  height: 100px;
+  border-radius: 4px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.card h2 {
+  text-align: center;
+  margin: 0.5rem;
+  width: 100%;          
+  white-space: nowrap;     
+  overflow: hidden;       
+  text-overflow: ellipsis;
+}
+
+.funcionament-div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 0.5rem;
+  margin-bottom: 0.5rem
+}
+
+.category-slider {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.category-slider::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+
+.category {
+  text-align: center;
+  flex: 0 0 auto;
+  width: 150px;
+  cursor: pointer;
+  transition: var(--animed-transition);
+}
+
+.category:hover {
+  transform: scale(1.1);
+}
+
+.category img {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+
+.category-name {
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
 .display {
   display: none;
 }
@@ -101,4 +198,14 @@ body {
 .close {
   color: var(--principal-color);
   font-weight: 700;
+}
+
+.houer-restaurant {
+  font-weight: 500;
+  color: #4b4b4b;
+}
+
+.category-text {
+  font-weight: 600;
+  text-transform: capitalize;
 }

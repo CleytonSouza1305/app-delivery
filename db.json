@@ -24,21 +24,36 @@
       "name": "Burger King",
       "category": [
         "fast-food",
-        "comida"
+        "hamburgueria"
       ],
       "isOpen": false,
-      "openHouer": 9,
-      "closeHouer": 22,
+      "openHour": 9,
+      "closeHour": 22,
       "menu": [
         {
           "id": 1,
-          "name": "Pizza",
-          "price": 18.99
+          "name": "Cheeseburger",
+          "price": 24.99
         },
         {
           "id": 2,
-          "name": "Hamburguer",
-          "price": 18.99
+          "name": "Bacon Burger",
+          "price": 29.99
+        },
+        {
+          "id": 3,
+          "name": "Batata Frita",
+          "price": 12.99
+        },
+        {
+          "id": 4,
+          "name": "Milkshake de Chocolate",
+          "price": 18.00
+        },
+        {
+          "id": 5,
+          "name": "Brownie com Sorvete",
+          "price": 14.00
         }
       ]
     },
@@ -47,11 +62,12 @@
       "restaurantPhoto": "https://content.portaldofranchising.com.br/wp-content/uploads/2016/03/08105636/sushijapa3.jpg",
       "name": "SushiJapa",
       "category": [
-        "sushi"
+        "sushi",
+        "japonês"
       ],
       "isOpen": false,
-      "openHouer": 9,
-      "closeHouer": 22,
+      "openHour": 9,
+      "closeHour": 22,
       "menu": [
         {
           "id": 1,
@@ -61,53 +77,373 @@
         {
           "id": 2,
           "name": "Tempura",
-          "price": 25
+          "price": 25.00
+        },
+        {
+          "id": 3,
+          "name": "Sashimi",
+          "price": 34.99
+        },
+        {
+          "id": 4,
+          "name": "Ramen",
+          "price": 27.00
+        },
+        {
+          "id": 5,
+          "name": "Gyoza",
+          "price": 18.00
         }
       ]
     },
     {
       "id": 3,
       "restaurantPhoto": "https://m.galeriadaarquitetura.com.br/Img//projeto/702x415/2615/restaurante-orgaz132.jpg",
-      "name": "Resturante C",
+      "name": "Restaurante Gourmet",
       "category": [
-        "sushi"
+        "gourmet",
+        "internacional"
       ],
       "isOpen": true,
-      "openHouer": 9,
-      "closeHouer": 22,
+      "openHour": 9,
+      "closeHour": 22,
       "menu": [
         {
           "id": 1,
-          "name": "Sushi",
-          "price": 29.99
+          "name": "Filet Mignon",
+          "price": 49.99
         },
         {
           "id": 2,
-          "name": "Tempura",
-          "price": 25
+          "name": "Risoto de Camarão",
+          "price": 42.99
+        },
+        {
+          "id": 3,
+          "name": "Salmão Grelhado",
+          "price": 38.00
+        },
+        {
+          "id": 4,
+          "name": "Salada Caesar",
+          "price": 22.00
+        },
+        {
+          "id": 5,
+          "name": "Panna Cotta",
+          "price": 19.00
         }
       ]
     },
     {
       "id": 4,
       "restaurantPhoto": "https://media-cdn.tripadvisor.com/media/photo-s/1c/5f/18/e3/fachada-do-restaurante.jpg",
-      "name": "Resturante D",
+      "name": "Bistrô Delícias",
       "category": [
-        "sushi"
+        "gourmet",
+        "francês"
       ],
       "isOpen": false,
-      "openHouer": 9,
-      "closeHouer": 22,
+      "openHour": 9,
+      "closeHour": 22,
       "menu": [
         {
           "id": 1,
-          "name": "Sushi",
-          "price": 29.99
+          "name": "Coq au Vin",
+          "price": 45.00
         },
         {
           "id": 2,
-          "name": "Tempura",
-          "price": 25
+          "name": "Bouef Bourguignon",
+          "price": 48.00
+        },
+        {
+          "id": 3,
+          "name": "Ratatoille",
+          "price": 29.99
+        },
+        {
+          "id": 4,
+          "name": "Creme Brûlée",
+          "price": 19.00
+        },
+        {
+          "id": 5,
+          "name": "Tarte Tatin",
+          "price": 18.00
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "restaurantPhoto": "https://images.pexels.com/photos/6267/menu-restaurant-vintage-table.jpg",
+      "name": "Restaurante La Pasta",
+      "category": [
+        "italiano",
+        "contemporâneo"
+      ],
+      "isOpen": true,
+      "openHour": 11,
+      "closeHour": 23,
+      "menu": [
+        {
+          "id": 1,
+          "name": "Spaghetti Carbonara",
+          "price": 34.99
+        },
+        {
+          "id": 2,
+          "name": "Lasagna alla Bolognese",
+          "price": 39.99
+        },
+        {
+          "id": 3,
+          "name": "Bruschetta",
+          "price": 15.99
+        },
+        {
+          "id": 4,
+          "name": "Vinho Tinto",
+          "price": 25.00
+        },
+        {
+          "id": 5,
+          "name": "Tiramisu",
+          "price": 18.00
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "restaurantPhoto": "https://images.pexels.com/photos/1267320/pexels-photo-1267320.jpeg",
+      "name": "Churrascaria Gaúcha",
+      "category": [
+        "churrasco",
+        "brasileiro"
+      ],
+      "isOpen": true,
+      "openHour": 12,
+      "closeHour": 22,
+      "menu": [
+        {
+          "id": 1,
+          "name": "Picanha",
+          "price": 59.99
+        },
+        {
+          "id": 2,
+          "name": "Costela Bovina",
+          "price": 49.99
+        },
+        {
+          "id": 3,
+          "name": "Linguiça Toscana",
+          "price": 29.99
+        },
+        {
+          "id": 4,
+          "name": "Caipirinha",
+          "price": 20.00
+        },
+        {
+          "id": 5,
+          "name": "Pudim de Leite",
+          "price": 12.00
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "restaurantPhoto": "https://images.pexels.com/photos/2531188/pexels-photo-2531188.jpeg",
+      "name": "Casa do Hambúrguer",
+      "category": [
+        "hamburgueria",
+        "fast-food"
+      ],
+      "isOpen": true,
+      "openHour": 10,
+      "closeHour": 23,
+      "menu": [
+        {
+          "id": 1,
+          "name": "Cheeseburger",
+          "price": 24.99
+        },
+        {
+          "id": 2,
+          "name": "Bacon Burger",
+          "price": 29.99
+        },
+        {
+          "id": 3,
+          "name": "Batata Frita",
+          "price": 12.99
+        },
+        {
+          "id": 4,
+          "name": "Milkshake de Chocolate",
+          "price": 18.00
+        },
+        {
+          "id": 5,
+          "name": "Brownie com Sorvete",
+          "price": 14.00
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "restaurantPhoto": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/8b/13/0e/nice-and-colourful-place.jpg?w=1200&h=-1&s=1",
+      "name": "Cantina Mexicana",
+      "category": [
+        "mexicano",
+        "bar"
+      ],
+      "isOpen": true,
+      "openHour": 11,
+      "closeHour": 22,
+      "menu": [
+        {
+          "id": 1,
+          "name": "Tacos de Carne",
+          "price": 24.99
+        },
+        {
+          "id": 2,
+          "name": "Guacamole",
+          "price": 19.99
+        },
+        {
+          "id": 3,
+          "name": "Quesadilla",
+          "price": 29.99
+        },
+        {
+          "id": 4,
+          "name": "Margarita",
+          "price": 22.00
+        },
+        {
+          "id": 5,
+          "name": "Churros com Doce de Leite",
+          "price": 14.00
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "restaurantPhoto": "https://images.pexels.com/photos/257840/pexels-photo-257840.jpeg",
+      "name": "Sabor Árabe",
+      "category": [
+        "árabe",
+        "mediterrâneo"
+      ],
+      "isOpen": true,
+      "openHour": 12,
+      "closeHour": 22,
+      "menu": [
+        {
+          "id": 1,
+          "name": "Esfiha de Carne",
+          "price": 19.99
+        },
+        {
+          "id": 2,
+          "name": "Kibe Frito",
+          "price": 22.99
+        },
+        {
+          "id": 3,
+          "name": "Tabule",
+          "price": 17.99
+        },
+        {
+          "id": 4,
+          "name": "Suco de Laranja",
+          "price": 12.00
+        },
+        {
+          "id": 5,
+          "name": "Baklava",
+          "price": 18.00
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "restaurantPhoto": "https://images.pexels.com/photos/4112680/pexels-photo-4112680.jpeg",
+      "name": "Pizzaria Bella Napoli",
+      "category": [
+        "italiano",
+        "pizza"
+      ],
+      "isOpen": true,
+      "openHour": 11,
+      "closeHour": 23,
+      "menu": [
+        {
+          "id": 1,
+          "name": "Margherita",
+          "price": 32.00
+        },
+        {
+          "id": 2,
+          "name": "Pepperoni",
+          "price": 36.00
+        },
+        {
+          "id": 3,
+          "name": "Calzone",
+          "price": 28.00
+        },
+        {
+          "id": 4,
+          "name": "Bruschetta",
+          "price": 15.00
+        },
+        {
+          "id": 5,
+          "name": "Tiramisu",
+          "price": 18.00
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "restaurantPhoto": "https://media-cdn.tripadvisor.com/media/photo-s/1f/72/b3/c3/smoke-n-grill.jpg",
+      "name": "Grill & Smoke",
+      "category": [
+        "churrasco",
+        "brasileiro"
+      ],
+      "isOpen": true,
+      "openHour": 12,
+      "closeHour": 22,
+      "menu": [
+        {
+          "id": 1,
+          "name": "Costela ao Barbecue",
+          "price": 55.00
+        },
+        {
+          "id": 2,
+          "name": "Picanha na Brasa",
+          "price": 65.00
+        },
+        {
+          "id": 3,
+          "name": "Linguiça Artesanal",
+          "price": 35.00
+        },
+        {
+          "id": 4,
+          "name": "Cerveja Artesanal",
+          "price": 18.00
+        },
+        {
+          "id": 5,
+          "name": "Pudim de Leite",
+          "price": 12.00
         }
       ]
     }
