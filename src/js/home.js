@@ -63,3 +63,12 @@ async function randomRestaurantSlider() {
 }
 
 randomRestaurantSlider()
+
+function promotionalBannerLoop() {
+  const imageSrc = document.getElementById('banner-image')
+  imageSrc.src = '../imgs/promotional-banner-1.avif'
+
+  let interval = 0
+}
+
+promotionalBannerLoop()

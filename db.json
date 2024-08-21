@@ -26,8 +26,8 @@
         "fast-food",
         "hamburgueria"
       ],
-      "openHour": 9,
-      "closeHour": 17,
+      "openHour": 10,
+      "closeHour": 22,
       "menu": [
         {
           "id": 1,
@@ -58,14 +58,52 @@
     },
     {
       "id": "2",
+      "restaurantPhoto": "https://images.pexels.com/photos/6267/menu-restaurant-vintage-table.jpg",
+      "name": "McDonald's",
+      "category": [
+        "fast-food",
+        "hamburgueria"
+      ],
+      "openHour": 10,
+      "closeHour": 23,
+      "menu": [
+        {
+          "id": 1,
+          "name": "Big Mac",
+          "price": 28.99
+        },
+        {
+          "id": 2,
+          "name": "McChicken",
+          "price": 22.99
+        },
+        {
+          "id": 3,
+          "name": "McNuggets",
+          "price": 19.99
+        },
+        {
+          "id": 4,
+          "name": "McFlurry",
+          "price": 16
+        },
+        {
+          "id": 5,
+          "name": "Batata Frita",
+          "price": 12
+        }
+      ]
+    },
+    {
+      "id": "3",
       "restaurantPhoto": "https://content.portaldofranchising.com.br/wp-content/uploads/2016/03/08105636/sushijapa3.jpg",
       "name": "SushiJapa",
       "category": [
         "sushi",
         "japonês"
       ],
-      "openHour": 9,
-      "closeHour": 22,
+      "openHour": 11,
+      "closeHour": 23,
       "menu": [
         {
           "id": 1,
@@ -95,15 +133,15 @@
       ]
     },
     {
-      "id": "3",
+      "id": "4",
       "restaurantPhoto": "https://m.galeriadaarquitetura.com.br/Img//projeto/702x415/2615/restaurante-orgaz132.jpg",
       "name": "Restaurante Gourmet",
       "category": [
         "gourmet",
         "internacional"
       ],
-      "openHour": 9,
-      "closeHour": 22,
+      "openHour": 11,
+      "closeHour": 23,
       "menu": [
         {
           "id": 1,
@@ -133,14 +171,14 @@
       ]
     },
     {
-      "id": "4",
+      "id": "5",
       "restaurantPhoto": "https://media-cdn.tripadvisor.com/media/photo-s/1c/5f/18/e3/fachada-do-restaurante.jpg",
       "name": "Bistrô Delícias",
       "category": [
         "gourmet",
         "francês"
       ],
-      "openHour": 9,
+      "openHour": 12,
       "closeHour": 22,
       "menu": [
         {
@@ -171,14 +209,14 @@
       ]
     },
     {
-      "id": "5",
-      "restaurantPhoto": "https://images.pexels.com/photos/6267/menu-restaurant-vintage-table.jpg",
+      "id": "6",
+      "restaurantPhoto": "https://images.pexels.com/photos/1267320/pexels-photo-1267320.jpeg",
       "name": "Restaurante La Pasta",
       "category": [
         "italiano",
         "contemporâneo"
       ],
-      "openHour": 11,
+      "openHour": 12,
       "closeHour": 23,
       "menu": [
         {
@@ -209,15 +247,15 @@
       ]
     },
     {
-      "id": "6",
-      "restaurantPhoto": "https://images.pexels.com/photos/1267320/pexels-photo-1267320.jpeg",
+      "id": "7",
+      "restaurantPhoto": "https://images.pexels.com/photos/2531188/pexels-photo-2531188.jpeg",
       "name": "Churrascaria Gaúcha",
       "category": [
         "churrasco",
         "brasileiro"
       ],
       "openHour": 12,
-      "closeHour": 22,
+      "closeHour": 23,
       "menu": [
         {
           "id": 1,
@@ -247,14 +285,14 @@
       ]
     },
     {
-      "id": "7",
-      "restaurantPhoto": "https://images.pexels.com/photos/2531188/pexels-photo-2531188.jpeg",
-      "name": "Casa do Hambúrguer",
+      "id": "8",
+      "restaurantPhoto": "https://static.ifood-static.com.br/image/upload/t_high/logosgde/85e9824c-2496-4d05-be28-181aab5dddc2/202010201848_d6D9_i.jpg",
+      "name": "La Casa de Hambúrguer",
       "category": [
         "hamburgueria",
         "fast-food"
       ],
-      "openHour": 10,
+      "openHour": 11,
       "closeHour": 23,
       "menu": [
         {
@@ -276,49 +314,6 @@
           "id": 4,
           "name": "Milkshake de Chocolate",
           "price": 18
-        },
-        {
-          "id": 5,
-          "name": "Brownie com Sorvete",
-          "price": 14
-        }
-      ]
-    },
-    {
-      "id": "8",
-      "restaurantPhoto": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/8b/13/0e/nice-and-colourful-place.jpg?w=1200&h=-1&s=1",
-      "name": "Cantina Mexicana",
-      "category": [
-        "mexicano",
-        "bar"
-      ],
-      "openHour": 11,
-      "closeHour": 22,
-      "menu": [
-        {
-          "id": 1,
-          "name": "Tacos de Carne",
-          "price": 24.99
-        },
-        {
-          "id": 2,
-          "name": "Guacamole",
-          "price": 19.99
-        },
-        {
-          "id": 3,
-          "name": "Quesadilla",
-          "price": 29.99
-        },
-        {
-          "id": 4,
-          "name": "Margarita",
-          "price": 22
-        },
-        {
-          "id": 5,
-          "name": "Churros com Doce de Leite",
-          "price": 14
         }
       ]
     },

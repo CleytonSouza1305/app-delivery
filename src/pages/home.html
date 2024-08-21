@@ -14,8 +14,14 @@
   <main data-theme="white-theme">
     <header>
       <nav>
-        <div class="logo">
-          <a href="./home.html"><img src="../imgs/ifood-logo.png" alt="Ifood Logo" width="150px" height="100px"></a>
+        <div class="top-header">
+          <div class="logo">
+            <a href="./home.html"><img src="../imgs/ifood-logo.png" alt="Ifood Logo" width="150px" height="100px"></a>
+          </div>
+          <div class="div-search">
+            <input type="search" class="search-input" placeholder="Buscar restaurante">
+            <div class="icon-div"><i class="fas fa-search"></i></div>
+          </div>
         </div>
 
         <ul class="ul-nav-principal">
@@ -39,13 +45,15 @@
     </header>
     <div id="promotional-banner">
       <div id="left-image" class="arrows"><i class="fa-solid fa-arrow-left"></i></div>
-      <img id="banner-image" src="https://img.freepik.com/vetores-premium/banner-de-promocao-de-midia-social-de-comida_56103-1028.jpg" alt="Banner Promocional">
+    
+        <img id="banner-image" src="" alt="Banner Promocional">
+        
       <div id="right-image" class="arrows"><i class="fa-solid fa-arrow-right"></i></div>
     </div>
     <h2>Próximos de você...</h2>
     <div class="restaunrant-content-slider"></div>
     <h2>Categorias</h2>
-    <div class="category-slider">
+    <div class="category-slider" id="categories">
     <div class="category">
         <img src="https://media.istockphoto.com/id/901501348/vector/slice-of-melted-cheese-pepperoni-pizza.jpg?s=612x612&w=0&k=20&c=0cIsVfLHiabGD1NGDZEfE1hIBmD5DQuzNuLK8Owvyo8=" alt="Pizza">
         <div class="category-name">Pizza</div>
