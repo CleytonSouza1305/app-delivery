@@ -66,9 +66,33 @@ randomRestaurantSlider()
 
 function promotionalBannerLoop() {
   const imageSrc = document.getElementById('banner-image')
-  imageSrc.src = '../imgs/promotional-banner-1.avif'
 
   let interval = 0
+
+  setInterval(() => {
+    interval++ 
+
+    if (interval === 1) {
+       imageSrc.src = '../imgs/promotional-banner-1.avif'
+       imageSrc.dataset.category = 'fast-food'
+    } else if (interval === 2) {
+      imageSrc.src = '../imgs/promotional-banner-2.jpg!w700wp'
+      imageSrc.dataset.category = 'pizza'
+    } else if (interval === 3) {
+      imageSrc.src = '../imgs/promotional-banner-3.jpg'
+      imageSrc.dataset.category = 'comida japonesa'
+    } else if (interval === 4) {
+      imageSrc.src = '../imgs/promotional-banner-4.avif'
+      imageSrc.dataset.category = 'massa'
+    } else if (interval === 5) {
+      imageSrc.src = '../imgs/promotional-banner-5.jpg'
+      imageSrc.dataset.category = 'sobremesa'
+    } else if (interval === 6) {
+      imageSrc.src = '../imgs/promotional-banner-6.jpg'
+      imageSrc.dataset.category = 'fast-food'
+      interval = 0
+    }
+  }, 1000 * 5)
 }
 
 promotionalBannerLoop()
