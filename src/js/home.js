@@ -101,6 +101,7 @@ function promotionalBannerLoop() {
 async function  renderData() {
   const url = `http://localhost:3000/restaurants/`
   restautantsArr = await fetch(url).then((r) => r.json())
+  restautantsArr.sort(() => Math.random() - 0.5)
 
   try {
     
