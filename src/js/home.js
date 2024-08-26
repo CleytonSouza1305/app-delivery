@@ -74,11 +74,10 @@ function promotionalBannerLoop() {
 
   setInterval(() => {
     interval++ 
-
-    if (interval === 1) {
-       imageSrc.src = '../imgs/promotional-banner-1.avif'
-       imageSrc.dataset.category = 'hamburguer'
-    } else if (interval === 2) {
+    imageSrc.src = '../imgs/promotional-banner-1.avif'
+    imageSrc.dataset.category = 'hamburguer'
+    
+    if (interval === 2) {
       imageSrc.src = '../imgs/promotional-banner-2.jpg!w700wp'
       imageSrc.dataset.category = 'pizza'
     } else if (interval === 3) {
@@ -96,6 +95,19 @@ function promotionalBannerLoop() {
       interval = 0
     }
   }, 1000 * 5)
+
+  const arrows = document.querySelectorAll('.arrows')
+  arrows.forEach((arrow) => {
+    arrow.addEventListener('click', () => {
+      if (arrow.id === 'left-image' && imageSrc.dataset.category !== 'hamburguer') {
+        interval--
+      } else {
+        while (interval <= 6) {
+          interval++
+        }
+      }
+    })
+  })
 }
 
 async function  renderData() {

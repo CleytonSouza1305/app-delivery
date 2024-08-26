@@ -172,7 +172,6 @@ display: none;
   transform: scale(1.1);
 }
 
-
 .card img {
   width: 100%;
   height: 100px;
@@ -296,4 +295,8 @@ display: none;
 .category-text {
   font-weight: 600;
   text-transform: capitalize;
+}
+
+.h2-title {
+  margin: 2rem 0;
 }
