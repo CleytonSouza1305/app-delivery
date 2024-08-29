@@ -151,27 +151,27 @@ async function  renderData() {
         feedBackDiv.classList.add('feedback-div')
         const heartIcon = document.createElement('button') 
         heartIcon.classList.add('heart-btn')
-        heartIcon.innerHTML = `<i class="fa-regular fa-heart"></i>`
+        heartIcon.innerHTML = `<i class="fa-solid fa-heart"></i>`
 
         const star01 = document.createElement('button')
         star01.classList.add('stars')
-        star01.innerHTML = `<i class="fa-regular fa-star"></i>`
+        star01.innerHTML = `<i class="fa-solid fa-star"></i>`
 
         const star02 = document.createElement('button')
         star02.classList.add('stars')
-        star02.innerHTML = `<i class="fa-regular fa-star"></i>`
+        star02.innerHTML = `<i class="fa-solid fa-star"></i>`
 
         const star03 = document.createElement('button')
         star03.classList.add('stars')
-        star03.innerHTML = `<i class="fa-regular fa-star"></i>`
+        star03.innerHTML = `<i class="fa-solid fa-star"></i>`
 
         const star04 = document.createElement('button')
         star04.classList.add('stars')
-        star04.innerHTML = `<i class="fa-regular fa-star"></i>`
+        star04.innerHTML = `<i class="fa-solid fa-star"></i>`
 
         const star05 = document.createElement('button')
         star05.classList.add('stars')
-        star05.innerHTML = `<i class="fa-regular fa-star"></i>`
+        star05.innerHTML = `<i class="fa-solid fa-star"></i>`
 
         const starDiv = document.createElement('div')
         starDiv.classList.add('star-div')
