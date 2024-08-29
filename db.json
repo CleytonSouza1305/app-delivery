@@ -33,41 +33,41 @@
           "id": 1,
           "name": "King Costela",
           "price": 24.99,
-          "image-food": "https://i.ytimg.com/vi/3IE2W64k0Ys/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLDL71UsHE9hWEbV3lSI_oeARgBQqQ",
+          "imageFood": "https://i.ytimg.com/vi/3IE2W64k0Ys/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLDL71UsHE9hWEbV3lSI_oeARgBQqQ",
           "discountPercentage": 0,
-          "food-category": ["hamburger"]
+          "foodCategory": ["hamburger"]
         },
         {
           "id": 2,
           "name": "Stacker Duplo Bacon",
           "price": 29.99,
-          "image-food": "https://static.ifood-static.com.br/image/upload/t_high/pratos/6e73dce2-a17f-4aef-9035-1409cea198fe/202306291447_KBBF_i.jpg",
+          "imageFood": "https://static.ifood-static.com.br/image/upload/t_high/pratos/6e73dce2-a17f-4aef-9035-1409cea198fe/202306291447_KBBF_i.jpg",
           "discountPercentage": 0,
-          "food-category": ["hamburger"]
+          "foodCategory": ["hamburger"]
         },
         {
           "id": 3,
           "name": "Batata Frita Individual",
           "price": 12.99,
-          "image-food": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR91B0HZrX-AsHFIKOBR6jPDMe3YAQ-NzJwyg&s",
+          "imageFood": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR91B0HZrX-AsHFIKOBR6jPDMe3YAQ-NzJwyg&s",
           "discountPercentage": 0,
-          "food-category": ["acompanhamento"]
+          "foodCategory": ["acompanhamento"]
         },
         {
           "id": 4,
           "name": "Milkshake de Chocolate",
           "price": 18,
-          "image-food": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIfxhr0YHUq4Chpr7-kH4ykelPxbihFQV8YQ&s",
+          "imageFood": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIfxhr0YHUq4Chpr7-kH4ykelPxbihFQV8YQ&s",
           "discountPercentage": 0,
-          "food-category": ["bebida", "sobremesa"]
+          "foodCategory": ["bebida", "sobremesa"]
         },
         {
           "id": 5,
           "name": "Bk Mix de  Brownie",
           "price": 14,
-          "image-food": "https://static.ifood-static.com.br/image/upload/t_high/pratos/6e73dce2-a17f-4aef-9035-1409cea198fe/202202012155_4K3W_i.jpg",
+          "imageFood": "https://static.ifood-static.com.br/image/upload/t_high/pratos/6e73dce2-a17f-4aef-9035-1409cea198fe/202202012155_4K3W_i.jpg",
           "discountPercentage": 0,
-          "food-category": ["sobremesa"]
+          "foodCategory": ["sobremesa"]
         }
       ]
     },
@@ -86,41 +86,41 @@
           "id": 1,
           "name": "Big Mac",
           "price": 28.99,
-          "image-food": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbwD1XA-YAKxXGRh-oM4Zzi-g3A5heN7TH3g&s",
+          "imageFood": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbwD1XA-YAKxXGRh-oM4Zzi-g3A5heN7TH3g&s",
           "discountPercentage": 0,
-          "food-category": ["hamburger"]
+          "foodCategory": ["hamburger"]
         },
         {
           "id": 2,
           "name": "McChicken",
           "price": 22.99,
-          "image-food": "https://static.wixstatic.com/media/d919ff_422c4189e8b54bcd9d9bab6d29707676~mv2.jpg/v1/fill/w_640,h_364,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/d919ff_422c4189e8b54bcd9d9bab6d29707676~mv2.jpg",
+          "imageFood": "https://static.wixstatic.com/media/d919ff_422c4189e8b54bcd9d9bab6d29707676~mv2.jpg/v1/fill/w_640,h_364,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/d919ff_422c4189e8b54bcd9d9bab6d29707676~mv2.jpg",
           "discountPercentage": 0,
-          "food-category": ["hamburger"]
+          "foodCategory": ["hamburger"]
         },
         {
           "id": 3,
           "name": "McNuggets",
           "price": 19.99,
-          "image-food": "https://photos.enjoei.com.br/ima-chicken-mc-nuggets-mcdonald-s-97752835/800x800/czM6Ly9waG90b3MuZW5qb2VpLmNvbS5ici9wcm9kdWN0cy8yODE2NjE2Ny82M2QxZDlhZTE1MjE2NDg4ODExMTc0OTc2ZjZlYzk2ZS5qcGc",
+          "imageFood": "https://photos.enjoei.com.br/ima-chicken-mc-nuggets-mcdonald-s-97752835/800x800/czM6Ly9waG90b3MuZW5qb2VpLmNvbS5ici9wcm9kdWN0cy8yODE2NjE2Ny82M2QxZDlhZTE1MjE2NDg4ODExMTc0OTc2ZjZlYzk2ZS5qcGc",
           "discountPercentage": 0,
-          "food-category": ["acompanhamento"]
+          "foodCategory": ["acompanhamento"]
         },
         {
           "id": 4,
           "name": "McFlurry",
           "price": 16,
-          "image-food": "https://i.pinimg.com/originals/f5/88/79/f588792d1d78a834ac369fcd89eea1b6.jpg",
+          "imageFood": "https://i.pinimg.com/originals/f5/88/79/f588792d1d78a834ac369fcd89eea1b6.jpg",
           "discountPercentage": 0,
-          "food-category": ["sobremesa"]
+          "foodCategory": ["sobremesa"]
         },
         {
           "id": 5,
           "name": "Batata Frita GD",
           "price": 12,
-          "image-food": "https://www.tupi.fm/wp-content/uploads/2022/05/macfritas.jpg",
+          "imageFood": "https://www.tupi.fm/wp-content/uploads/2022/05/macfritas.jpg",
           "discountPercentage": 0,
-          "food-category": ["acompanhamento"]
+          "foodCategory": ["acompanhamento"]
         }
       ]
     },
@@ -139,41 +139,41 @@
           "id": 1,
           "name": "Sushi",
           "price": 29,
-          "image-food": "https://static.wixstatic.com/media/f9b308_1c5f63bb08554629a0bad7ea90247378~mv2.jpg/v1/fill/w_640,h_426,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/f9b308_1c5f63bb08554629a0bad7ea90247378~mv2.jpg",
+          "imageFood": "https://static.wixstatic.com/media/f9b308_1c5f63bb08554629a0bad7ea90247378~mv2.jpg/v1/fill/w_640,h_426,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/f9b308_1c5f63bb08554629a0bad7ea90247378~mv2.jpg",
           "discountPercentage": 0,
-          "food-category": ["japonês", "sushi"]
+          "foodCategory": ["japonês", "sushi"]
         },
         {
           "id": 2,
           "name": "Tempura de Legumes",
           "price": 25,
-          "image-food": "https://i.ytimg.com/vi/Gl8bgyviQTw/maxresdefault.jpg",
+          "imageFood": "https://i.ytimg.com/vi/Gl8bgyviQTw/maxresdefault.jpg",
           "discountPercentage": 0,
-          "food-category": ["japonês", "sushi"]
+          "foodCategory": ["japonês", "sushi"]
         },
         {
           "id": 3,
           "name": "Sashimi",
           "price": 34,
-          "image-food": "https://images.tcdn.com.br/img/img_prod/842178/salmao_fresco_fatiado_tipo_sashimi_77_1_20200903170409.jpg",
+          "imageFood": "https://images.tcdn.com.br/img/img_prod/842178/salmao_fresco_fatiado_tipo_sashimi_77_1_20200903170409.jpg",
           "discountPercentage": 0,
-          "food-category": ["japonês", "sushi"]
+          "foodCategory": ["japonês", "sushi"]
         },
         {
           "id": 4,
           "name": "Ramen",
           "price": 27,
-          "image-food": "https://assets.tmecosys.com/image/upload/t_web767x639/img/recipe/ras/Assets/17eefccc0612317aa9f2ce1fbaae56cc/Derivates/3740e0c14b97c50890905a1961b9eb542959cc06.jpg",
+          "imageFood": "https://assets.tmecosys.com/image/upload/t_web767x639/img/recipe/ras/Assets/17eefccc0612317aa9f2ce1fbaae56cc/Derivates/3740e0c14b97c50890905a1961b9eb542959cc06.jpg",
           "discountPercentage": 0,
-          "food-category": ["japones", "massa"]
+          "foodCategory": ["japones", "massa"]
         },
         {
           "id": 5,
           "name": "Gyoza",
           "price": 18,
-          "image-food": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7ZCE9uPWOv3g-gbpx_xCq3xTbdhZgD72c3g&s",
+          "imageFood": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7ZCE9uPWOv3g-gbpx_xCq3xTbdhZgD72c3g&s",
           "discountPercentage": 0,
-          "food-category": ["japones", "aperitivos"]
+          "foodCategory": ["japones", "aperitivos"]
         }
       ]
     },
@@ -192,41 +192,41 @@
           "id": 1,
           "name": "Filet Mignon",
           "price": 49,
-          "image-food": "https://hips.hearstapps.com/hmg-prod/images/filet-mignon-index-66c4b19cc80ba.jpeg?crop=1.00xw:1.00xh;0,0&resize=1200:*",
+          "imageFood": "https://hips.hearstapps.com/hmg-prod/images/filet-mignon-index-66c4b19cc80ba.jpeg?crop=1.00xw:1.00xh;0,0&resize=1200:*",
           "discountPercentage": 0,
-          "food-category": ["gourmet", "carnes"]
+          "foodCategory": ["gourmet", "carnes"]
         },
         {
           "id": 2,
           "name": "Risoto de Camarão",
           "price": 42,
-          "image-food": "https://www.unileverfoodsolutions.com.br/dam/global-ufs/mcos/SLA/calcmenu/recipes/BR-recipes/general/risoto-de-camar%C3%A3o/main-header.jpg",
+          "imageFood": "https://www.unileverfoodsolutions.com.br/dam/global-ufs/mcos/SLA/calcmenu/recipes/BR-recipes/general/risoto-de-camar%C3%A3o/main-header.jpg",
           "discountPercentage": 0,
-          "food-category": ["gourmet", "frutos do mar"]
+          "foodCategory": ["gourmet", "frutos do mar"]
         },
         {
           "id": 3,
           "name": "Salmão Grelhado",
           "price": 38,
-          "image-food": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyAHv8XcVWQsoHyXX1f4dgw2Uh6k2PETRoBg&s",
+          "imageFood": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyAHv8XcVWQsoHyXX1f4dgw2Uh6k2PETRoBg&s",
           "discountPercentage": 0,
-          "food-category": ["gourmet", "frutos do mar"]
+          "foodCategory": ["gourmet", "frutos do mar"]
         },
         {
           "id": 4,
           "name": "Salada Caesar",
           "price": 22,
-          "image-food": "https://static.itdg.com.br/images/1200-630/f6acb58cd0215a6d2118c4a87ebab1fe/153730-original.jpg",
+          "imageFood": "https://static.itdg.com.br/images/1200-630/f6acb58cd0215a6d2118c4a87ebab1fe/153730-original.jpg",
           "discountPercentage": 0,
-          "food-category": ["salada", "entrada", "frances"]
+          "foodCategory": ["salada", "entrada", "frances"]
         },
         {
           "id": 5,
           "name": "Panna Cotta",
           "price": 19,
-          "image-food": "https://www.cookingclassy.com/wp-content/uploads/2021/05/panna-cotta-01.jpg",
+          "imageFood": "https://www.cookingclassy.com/wp-content/uploads/2021/05/panna-cotta-01.jpg",
           "discountPercentage": 0,
-          "food-category": ["sobremesa", "frances", "italiano"]
+          "foodCategory": ["sobremesa", "frances", "italiano"]
         }
       ]
     },
@@ -245,41 +245,41 @@
           "id": 1,
           "name": "Coq au Vin",
           "price": 45,
-          "image-food": "https://static01.nyt.com/images/2023/08/24/multimedia/MC-Coq-Au-Van-ctpm/MC-Coq-Au-Van-ctpm-superJumbo.jpg",
+          "imageFood": "https://static01.nyt.com/images/2023/08/24/multimedia/MC-Coq-Au-Van-ctpm/MC-Coq-Au-Van-ctpm-superJumbo.jpg",
           "discountPercentage": 0,
-          "food-category": ["carnes", "frances", "prato principal"]
+          "foodCategory": ["carnes", "frances", "prato principal"]
         },
         {
           "id": 2,
           "name": "Bouef Bourguignon",
           "price": 48,
-          "image-food": "https://www.estadao.com.br/resizer/v2/IGWRER4QY5GXBK3U2XXDNV3PAI.jpg?quality=80&auth=0b11b79b446d51507f20b6400986cf3463a827aac46e3b9418f7487e4e94c8b7&width=720&height=503&smart=true",
+          "imageFood": "https://www.estadao.com.br/resizer/v2/IGWRER4QY5GXBK3U2XXDNV3PAI.jpg?quality=80&auth=0b11b79b446d51507f20b6400986cf3463a827aac46e3b9418f7487e4e94c8b7&width=720&height=503&smart=true",
           "discountPercentage": 0,
-          "food-category": ["carnes", "frances", "prato principal"]
+          "foodCategory": ["carnes", "frances", "prato principal"]
         },
         {
           "id": 3,
           "name": "Ratatoille",
           "price": 29,
-          "image-food": "https://s2-receitas.glbimg.com/jOvVw-5MaZswJgZvZ8ya1V7ZMXE=/0x0:800x533/924x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_e84042ef78cb4708aeebdf1c68c6cbd6/internal_photos/bs/2018/c/r/mLrOqnRiemx034biSdHw/ratatouille.jpg",
+          "imageFood": "https://s2-receitas.glbimg.com/jOvVw-5MaZswJgZvZ8ya1V7ZMXE=/0x0:800x533/924x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_e84042ef78cb4708aeebdf1c68c6cbd6/internal_photos/bs/2018/c/r/mLrOqnRiemx034biSdHw/ratatouille.jpg",
           "discountPercentage": 0,
-          "food-category": ["carnes", "frances", "prato principal", "acompanhamento"]
+          "foodCategory": ["carnes", "frances", "prato principal", "acompanhamento"]
         },
         {
           "id": 4,
           "name": "Creme Brûlée",
           "price": 19,
-          "image-food": "",
+          "imageFood": "",
           "discountPercentage": 0,
-          "food-category": ["sobremesa", "frances"]
+          "foodCategory": ["sobremesa", "frances"]
         },
         {
           "id": 5,
           "name": "Tarte Tatin",
           "price": 18,
-          "image-food": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEr2-GMw7_-zIlZ8EvvEqmtc4MppvoOtBfFw&s",
+          "imageFood": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEr2-GMw7_-zIlZ8EvvEqmtc4MppvoOtBfFw&s",
           "discountPercentage": 0,
-          "food-category": ["sobremesa", "frances"]
+          "foodCategory": ["sobremesa", "frances"]
         }
       ]
     },
@@ -298,41 +298,41 @@
           "id": 1,
           "name": "Spaghetti Carbonara",
           "price": 34,
-          "image-food": "https://cdn.urbano.com.br/uploads/espaguete-a-carbonara-800.jpg",
+          "imageFood": "https://cdn.urbano.com.br/uploads/espaguete-a-carbonara-800.jpg",
           "discountPercentage": 0,
-          "food-category": ["pasta", "italiano"]
+          "foodCategory": ["pasta", "italiano"]
         },
         {
           "id": 2,
           "name": "Lasagna alla Bolognese",
           "price": 39,
-          "image-food": "https://www.ricettedalmondo.it/images/foto-ricette/l/29109-lasagne-alla-bolognese.jpg",
+          "imageFood": "https://www.ricettedalmondo.it/images/foto-ricette/l/29109-lasagne-alla-bolognese.jpg",
           "discountPercentage": 0,
-          "food-category": ["pasta", "italiano"]
+          "foodCategory": ["pasta", "italiano"]
         },
         {
           "id": 3,
           "name": "Bruschetta",
           "price": 15,
-          "image-food": "https://static.itdg.com.br/images/1200-630/dadafb5a13a8fc316bded0ea8feb2a37/326223-original.jpg",
+          "imageFood": "https://static.itdg.com.br/images/1200-630/dadafb5a13a8fc316bded0ea8feb2a37/326223-original.jpg",
           "discountPercentage": 0,
-          "food-category": ["pasta", "italiano"]
+          "foodCategory": ["pasta", "italiano"]
         },
         {
           "id": 4,
           "name": "Vinho Tinto",
           "price": 25,
-          "image-food": "https://s.zst.com.br/cms-assets/2022/02/design-sem-nome-2022-02-22t145101.508.webp",
+          "imageFood": "https://s.zst.com.br/cms-assets/2022/02/design-sem-nome-2022-02-22t145101.508.webp",
           "discountPercentage": 0,
-          "food-category": ["bebida"]
+          "foodCategory": ["bebida"]
         },
         {
           "id": 5,
           "name": "Tiramisu",
           "price": 18,
-          "image-food": "https://p2.trrsf.com/image/fget/cf/1200/1200/middle/images.terra.com/2022/12/19/67791397-tiramisu-diferentes-versoes.jpg",
+          "imageFood": "https://p2.trrsf.com/image/fget/cf/1200/1200/middle/images.terra.com/2022/12/19/67791397-tiramisu-diferentes-versoes.jpg",
           "discountPercentage": 0,
-          "food-category": ["sobremesa", "italiano"]
+          "foodCategory": ["sobremesa", "italiano"]
         }
       ]
     },
@@ -351,41 +351,41 @@
           "id": 1,
           "name": "Picanha",
           "price": 59,
-          "image-food": "https://lirp.cdn-website.com/33406c6e/dms3rep/multi/opt/picanha-aa0c51c6-640w.jpg",
+          "imageFood": "https://lirp.cdn-website.com/33406c6e/dms3rep/multi/opt/picanha-aa0c51c6-640w.jpg",
           "discountPercentage": 0,
-          "food-category": ["churrasco", "brasileiro", "carnes"]
+          "foodCategory": ["churrasco", "brasileiro", "carnes"]
         },
         {
           "id": 2,
           "name": "Costela Bovina",
           "price": 49,
-          "image-food": "https://www.sabornamesa.com.br/media/k2/items/cache/8a7eacb7a228abdc187ecece4128652b_XL.jpg",
+          "imageFood": "https://www.sabornamesa.com.br/media/k2/items/cache/8a7eacb7a228abdc187ecece4128652b_XL.jpg",
           "discountPercentage": 0,
-          "food-category": ["churrasco", "brasileiro", "carnes"]
+          "foodCategory": ["churrasco", "brasileiro", "carnes"]
         },
         {
           "id": 3,
           "name": "Linguiça Toscana",
           "price": 29,
-          "image-food": "https://www.minhareceita.com.br/app/uploads/2023/05/como-fazer-linguica-frita.jpg",
+          "imageFood": "https://www.minhareceita.com.br/app/uploads/2023/05/como-fazer-linguica-frita.jpg",
           "discountPercentage": 0,
-          "food-category": ["churrasco", "brasileiro", "carnes"]
+          "foodCategory": ["churrasco", "brasileiro", "carnes"]
         },
         {
           "id": 4,
           "name": "Caipirinha",
           "price": 20,
-          "image-food": "https://catracalivre.com.br/cdn-cgi/image/f=auto,q=60,w=1280,h=720,fit=cover,format=jpeg/wp-content/uploads/2023/11/caipirinha-morango-kiwi.jpg",
+          "imageFood": "https://catracalivre.com.br/cdn-cgi/image/f=auto,q=60,w=1280,h=720,fit=cover,format=jpeg/wp-content/uploads/2023/11/caipirinha-morango-kiwi.jpg",
           "discountPercentage": 0,
-          "food-category": ["bebida", "brasileiro"]
+          "foodCategory": ["bebida", "brasileiro"]
         },
         {
           "id": 5,
           "name": "Pudim de Leite",
           "price": 12,
-          "image-food": "https://static.itdg.com.br/images/360-240/d1307a2e17cda187df76b78cfd3ac464/shutterstock-2322251819-1-.jpg",
+          "imageFood": "https://static.itdg.com.br/images/360-240/d1307a2e17cda187df76b78cfd3ac464/shutterstock-2322251819-1-.jpg",
           "discountPercentage": 0,
-          "food-category": ["brasileiro", "sobremesa"]
+          "foodCategory": ["brasileiro", "sobremesa"]
         }
       ]
     },
@@ -402,35 +402,35 @@
       "menu": [
         {
           "id": 1,
-          "name": "Cheeseburger",
+          "name": "Chees Salada Burger",
           "price": 24,
-          "image-food": "",
+          "imageFood": "https://www.saboresajinomoto.com.br/uploads/images/recipes/cheese-salada-burguer.jpg",
           "discountPercentage": 0,
-          "food-category": ""
+          "foodCategory": ["hamburger"]
         },
         {
           "id": 2,
           "name": "Bacon Burger",
           "price": 29,
-          "image-food": "",
+          "imageFood": "https://ogimg.infoglobo.com.br/in/23479747-134-388/FT1086A/760/Burgers.ComeggFoto-Rodrigo-Azevedo.jpg",
           "discountPercentage": 0,
-          "food-category": ""
+          "foodCategory": ["hamburger"]
         },
         {
           "id": 3,
           "name": "Batata Frita",
           "price": 12,
-          "image-food": "",
+          "imageFood": "https://gastronomiacarioca.zonasul.com.br/wp-content/uploads/2023/05/batata_frita_destaque_ilustrativo_zona_sul.jpg",
           "discountPercentage": 0,
-          "food-category": ""
+          "foodCategory": ["acompanhamento"]
         },
         {
           "id": 4,
           "name": "Milkshake de Chocolate",
           "price": 18,
-          "image-food": "",
+          "imageFood": "https://s2.glbimg.com/jgXrnTYb0VYUkQcsPtaBrt1X_7U=/600x900/smart/e.glbimg.com/og/ed/f/original/2020/01/24/receita-de-milk-shake-vegano.jpg",
           "discountPercentage": 0,
-          "food-category": ""
+          "foodCategory": ["sobremesa", "bebida"]
         }
       ]
     },
@@ -449,41 +449,41 @@
           "id": 1,
           "name": "Esfiha de Carne",
           "price": 19,
-          "image-food": "",
+          "imageFood": "https://img.cybercook.com.br/imagens/receitas/988/esfiha-arabe-2.jpeg",
           "discountPercentage": 0,
-          "food-category": ""
+          "foodCategory": ["arabe", "lanche"]
         },
         {
           "id": 2,
           "name": "Kibe Frito",
           "price": 22,
-          "image-food": "",
+          "imageFood": "https://www.receiteria.com.br/wp-content/uploads/quibe-frito-caseiro-rotated.jpeg",
           "discountPercentage": 0,
-          "food-category": ""
+          "foodCategory": ["arabe", "lanche"]
         },
         {
           "id": 3,
           "name": "Tabule",
           "price": 17,
-          "image-food": "",
+          "imageFood": "https://vocegastro.com.br/app/uploads/2021/06/receita-de-tabule-simples.jpg.webp",
           "discountPercentage": 0,
-          "food-category": ""
+          "foodCategory": ["arabe", "salada"]
         },
         {
           "id": 4,
           "name": "Suco de Laranja",
           "price": 12,
-          "image-food": "",
+          "imageFood": "https://s2.glbimg.com/E1WXXtiXeTi1DyT5Y1O3uf2DICs=/e.glbimg.com/og/ed/f/original/2019/01/15/31617293018_896bf29d55_k.jpg",
           "discountPercentage": 0,
-          "food-category": ""
+          "foodCategory": ["bebida"]
         },
         {
           "id": 5,
           "name": "Baklava",
           "price": 18,
-          "image-food": "",
+          "imageFood": "https://upload.wikimedia.org/wikipedia/commons/c/c7/Baklava%281%29.png",
           "discountPercentage": 0,
-          "food-category": ""
+          "foodCategory": ["arabe", "sobremesa"]
         }
       ]
     },
@@ -502,41 +502,41 @@
           "id": 1,
           "name": "Margherita",
           "price": 32,
-          "image-food": "",
+          "imageFood": "https://s2-receitas.glbimg.com/wb7DIMyCpEyV07sTAtcDWD8HQjw=/0x0:1200x675/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_1f540e0b94d8437dbbc39d567a1dee68/internal_photos/bs/2024/h/r/EfCbvqTbeDRAD3Lzc5xA/pizza-margherita.jpg",
           "discountPercentage": 0,
-          "food-category": ""
+          "foodCategory": ["lanche", "italiano", "brasileiro"]
         },
         {
           "id": 2,
           "name": "Pepperoni",
           "price": 36,
-          "image-food": "",
+          "imageFood": "https://www.simplyrecipes.com/thmb/KE6iMblr3R2Db6oE8HdyVsFSj2A=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__simply_recipes__uploads__2019__09__easy-pepperoni-pizza-lead-3-1024x682-583b275444104ef189d693a64df625da.jpg",
           "discountPercentage": 0,
-          "food-category": ""
+          "foodCategory": ["lanche", "italiano", "brasileiro"]
         },
         {
           "id": 3,
           "name": "Calzone",
           "price": 28,
-          "image-food": "",
+          "imageFood": "https://lirp.cdn-website.com/33406c6e/dms3rep/multi/opt/calzone-640w.jpg",
           "discountPercentage": 0,
-          "food-category": ""
+          "foodCategory": ["lanche", "italiano"]
         },
         {
           "id": 4,
           "name": "Bruschetta",
           "price": 15,
-          "image-food": "",
+          "imageFood": "https://static.itdg.com.br/images/1200-630/dadafb5a13a8fc316bded0ea8feb2a37/326223-original.jpg",
           "discountPercentage": 0,
-          "food-category": ""
+          "foodCategory": ["pasta", "italiano"]
         },
         {
           "id": 5,
           "name": "Tiramisu",
           "price": 18,
-          "image-food": "",
+          "imageFood": "https://p2.trrsf.com/image/fget/cf/1200/1200/middle/images.terra.com/2022/12/19/67791397-tiramisu-diferentes-versoes.jpg",
           "discountPercentage": 0,
-          "food-category": ""
+          "foodCategory": ["sobremesa", "italiano"]
         }
       ]
     },
@@ -555,41 +555,41 @@
           "id": 1,
           "name": "Costela ao Barbecue",
           "price": 55,
-          "image-food": "",
+          "imageFood": "https://acarnequeomundoprefere.com.br/uploads/media/image/frimesa-receitas-costela-ao-molho-bbq-2.jpg",
           "discountPercentage": 0,
-          "food-category": ""
+          "foodCategory": ["carnes", "churrasco"]
         },
         {
           "id": 2,
           "name": "Picanha na Brasa",
           "price": 65,
-          "image-food": "",
+          "imageFood": "https://api.vinicolagaribaldi.com.br/storage/RJBXEPHkV3mKQHo8wgs2MJI4NZrbeA13UekHmdDm.jpeg",
           "discountPercentage": 0,
-          "food-category": ""
+          "foodCategory": ["carnes", "churrasco"]
         },
         {
           "id": 3,
           "name": "Linguiça Artesanal",
           "price": 35,
-          "image-food": "",
+          "imageFood": "https://loja.srfilet.com.br/cdn/shop/products/fininhaardida_1051x700.jpg?v=1611688343",
           "discountPercentage": 0,
-          "food-category": ""
+          "foodCategory": ["carnes", "churrasco"]
         },
         {
           "id": 4,
           "name": "Cerveja Artesanal",
           "price": 18,
-          "image-food": "",
+          "imageFood": "https://img.imageboss.me/consul/cdn/animation:true/wp-content/uploads/2021/08/imagem_feed_01-36.png",
           "discountPercentage": 0,
-          "food-category": ""
+          "foodCategory": ["bebida"]
         },
         {
           "id": 5,
           "name": "Pudim de Leite",
           "price": 12,
-          "image-food": "",
+          "imageFood": "https://static.itdg.com.br/images/360-240/d1307a2e17cda187df76b78cfd3ac464/shutterstock-2322251819-1-.jpg",
           "discountPercentage": 0,
-          "food-category": ""
+          "foodCategory": ["brasileiro", "sobremesa"]
         }
       ]
     }
