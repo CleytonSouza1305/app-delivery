@@ -142,7 +142,7 @@ async function  renderData() {
 
         for (let c = 0; c < categories.length; c++) {
           const p = document.createElement('p')
-          p.innerHTML = `<span class="rounded"></span> ${categories[c]}`
+          p.innerHTML = categories[c]
 
           div.append(p)
         }
@@ -151,30 +151,30 @@ async function  renderData() {
         feedBackDiv.classList.add('feedback-div')
         const heartIcon = document.createElement('button') 
         heartIcon.classList.add('heart-btn')
-        heartIcon.innerHTML = `<i class="fa-solid fa-heart"></i>`
+        heartIcon.innerHTML = `&#9829`
 
         const star01 = document.createElement('button')
-        star01.classList.add('stars')
-        star01.innerHTML = `<i class="fa-solid fa-star"></i>`
+        star01.classList.add('star')
+        star01.innerHTML = `&#9733`
 
         const star02 = document.createElement('button')
-        star02.classList.add('stars')
-        star02.innerHTML = `<i class="fa-solid fa-star"></i>`
+        star02.classList.add('star')
+        star02.innerHTML = `&#9733`
 
         const star03 = document.createElement('button')
-        star03.classList.add('stars')
-        star03.innerHTML = `<i class="fa-solid fa-star"></i>`
+        star03.classList.add('star')
+        star03.innerHTML = `&#9733`
 
         const star04 = document.createElement('button')
-        star04.classList.add('stars')
-        star04.innerHTML = `<i class="fa-solid fa-star"></i>`
+        star04.classList.add('star')
+        star04.innerHTML = `&#9733`
 
         const star05 = document.createElement('button')
-        star05.classList.add('stars')
-        star05.innerHTML = `<i class="fa-solid fa-star"></i>`
+        star05.classList.add('star')
+        star05.innerHTML = `&#9733`
 
         const starDiv = document.createElement('div')
-        starDiv.classList.add('star-div')
+        starDiv.classList.add('stars')
         starDiv.append(star01, star02, star03, star04, star05)
 
         feedBackDiv.append(starDiv, heartIcon)
