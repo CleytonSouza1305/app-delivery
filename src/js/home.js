@@ -113,7 +113,7 @@ async function  renderData() {
   const url = `http://localhost:3000/restaurants/`
   restautantsArr = await fetch(url).then((r) => r.json())
   restautantsArr.sort(() => Math.random() - 0.5)
-
+  
   try {
     
     const container = document.querySelector('.cards-all-restaurants')
@@ -122,8 +122,6 @@ async function  renderData() {
       for (let j = 0; j < menu.length; j++) {
         const card = document.createElement('div')
         card.classList.add('card-menu')
-        card.dataset.foodname = restautantsArr[i].name
-        card.dataset.idfood = menu[j].name
 
         const h2Title = document.createElement('h2')
         h2Title.classList.add('menu-title')
@@ -140,7 +138,7 @@ async function  renderData() {
         const div = document.createElement('div')
         div.classList.add('categories-menu')
 
-        for (let c = 0; c < categories.length; c++) {
+        for (let c = 0; c < 2; c++) {
           const p = document.createElement('p')
           p.innerHTML = categories[c]
 
@@ -152,6 +150,9 @@ async function  renderData() {
         const heartIcon = document.createElement('button') 
         heartIcon.classList.add('heart-btn')
         heartIcon.innerHTML = `&#9829`
+        heartIcon.dataset.userId = localStorage.getItem('id')
+        heartIcon.dataset.restaurant = restautantsArr[i].name 
+        heartIcon.dataset.foodNameMenu = menu[j].name 
 
         const star01 = document.createElement('button')
         star01.classList.add('star')
@@ -179,13 +180,45 @@ async function  renderData() {
 
         feedBackDiv.append(starDiv, heartIcon)
 
-        card.append(h2Title, image, foodName,div, feedBackDiv)
+        const addToCart = document.createElement('button')
+        addToCart.type = 'button'
+        addToCart.classList.add('add-to-cart-btn')
+        addToCart.dataset.menuId = menu[j].id
+        addToCart.dataset.name = restautantsArr[i].name
+        addToCart.textContent = '+'
+
+        const bottomDiv = document.createElement('div')
+        bottomDiv.classList.add('bottom-div')
+
+        const price = document.createElement('p')
+        price.classList.add('price-element')
+        price.textContent = `R$ ${menu[j].price}`
+
+        bottomDiv.append(addToCart, price)
+
+        card.append(h2Title, image, foodName,div, feedBackDiv, bottomDiv)
         container.append(card)
       }
   }
 
+  const likeBtn = document.querySelectorAll('.heart-btn')
+  likeBtn.forEach((btn) => {
+    if (btn) {
+      btn.addEventListener('click', async () => {
+        if (!btn.classList.contains('liked')) {
+          const userId = btn.dataset.userId
+          const restaurantName = btn.dataset.restaurant
+          const foodName = btn.dataset.foodNameMenu
+          btn.classList.add('liked')
+
+          sendFeedBackLike(userId, restaurantName, foodName)
+        }
+      })
+    }
+  })
+   updateLikeButtons()
   } catch (e) {
-    console.log(`Erro ao processar dado: ${e}`);
+    console.error(`Erro ao processar dado: ${e}`);
   }
 
   console.log(restautantsArr);
@@ -193,3 +226,62 @@ async function  renderData() {
 }
 
 renderData()
+
+const cartBtn = document.querySelector('.cart-div')
+cartBtn.addEventListener('click', () => {
+  const cart = document.querySelector('.carrinho')
+  cart.classList.add('cart-openned')
+
+  document.querySelector('#close-btn').addEventListener('click', () => {
+    cart.classList.remove('cart-openned')
+  })
+})
+
+
+async function sendFeedBackLike(userId, restaurantName, foodName) {
+
+  const feedback = {
+    restaurantName,
+    foodName
+  };
+
+  const user = await fetch(`http://localhost:3000/user/${userId}`).then((res) => res.json())
+
+  const existFeed = user.feedback
+
+  existFeed.forEach( async (element) => {
+    if (element.restaurantName === restaurantName && element.foodName === foodName) {
+      return
+    } else {
+      const updatedFeedback = [...(user.feedback || []), feedback];
+
+      await fetch(`http://localhost:3000/user/${userId}`, {
+        method: 'PATCH',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ feedback: updatedFeedback })
+      });
+    }
+  })
+}
+
+async function updateLikeButtons() {
+  const user = await fetch(`http://localhost:3000/user/${localStorage.getItem('id')}`).then((result) => result.json())
+
+  const feedback = user.feedback
+  
+  const like = document.querySelectorAll('.heart-btn')
+  like.forEach((element) => {
+    feedback.filter((restaurante) => {
+      if (restaurante.foodName === element.dataset.foodNameMenu) {
+        element.classList.add('liked')
+      } else {
+        element.classList.remove('liked')
+      }
+    })
+  })
+}
+
+updateLikeButtons()
+
