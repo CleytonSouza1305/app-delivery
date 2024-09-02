@@ -7,7 +7,32 @@
       "password": "123qAA##aa",
       "cpf": "222.222.222-22",
       "address": "a",
-      "feedback": []
+      "feedback": [
+        {
+          "restaurantName": "Restaurante Gourmet",
+          "foodName": "Risoto de Camarão"
+        },
+        {
+          "restaurantName": "Bistrô Delícias",
+          "foodName": "Coq au Vin"
+        },
+        {
+          "restaurantName": "McDonald's",
+          "foodName": "Batata Frita GD"
+        },
+        {
+          "restaurantName": "Churrascaria Gaúcha",
+          "foodName": "Pudim de Leite"
+        },
+        {
+          "restaurantName": "McDonald's",
+          "foodName": "Big Mac"
+        },
+        {
+          "restaurantName": "Restaurante La Pasta",
+          "foodName": "Lasagna alla Bolognese"
+        }
+      ]
     },
     {
       "id": "2",

@@ -153,6 +153,7 @@ async function  renderData() {
         heartIcon.dataset.userId = localStorage.getItem('id')
         heartIcon.dataset.restaurant = restautantsArr[i].name 
         heartIcon.dataset.foodNameMenu = menu[j].name 
+        heartIcon.type = 'button'
 
         const star01 = document.createElement('button')
         star01.classList.add('star')
@@ -173,6 +174,12 @@ async function  renderData() {
         const star05 = document.createElement('button')
         star05.classList.add('star')
         star05.innerHTML = `&#9733`
+
+        star01.type = 'button'
+        star02.type = 'button'
+        star03.type = 'button'
+        star04.type = 'button'
+        star05.type = 'button'
 
         const starDiv = document.createElement('div')
         starDiv.classList.add('stars')
@@ -203,8 +210,7 @@ async function  renderData() {
 
   const likeBtn = document.querySelectorAll('.heart-btn')
   likeBtn.forEach((btn) => {
-    if (btn) {
-      btn.addEventListener('click', async () => {
+      btn.addEventListener('click',() => {
         if (!btn.classList.contains('liked')) {
           const userId = btn.dataset.userId
           const restaurantName = btn.dataset.restaurant
@@ -214,9 +220,7 @@ async function  renderData() {
           sendFeedBackLike(userId, restaurantName, foodName)
         }
       })
-    }
   })
-   updateLikeButtons()
   } catch (e) {
     console.error(`Erro ao processar dado: ${e}`);
   }
@@ -239,31 +243,30 @@ cartBtn.addEventListener('click', () => {
 
 
 async function sendFeedBackLike(userId, restaurantName, foodName) {
+  const feedback = { restaurantName, foodName };
 
-  const feedback = {
-    restaurantName,
-    foodName
-  };
+  const user = await fetch(`http://localhost:3000/user/${userId}`).then((res) => res.json());
 
-  const user = await fetch(`http://localhost:3000/user/${userId}`).then((res) => res.json())
+  const existFeed = user.feedback || [];
+  const feedbackExists = existFeed.some(
+    (element) => element.restaurantName === restaurantName && element.foodName === foodName
+  );
 
-  const existFeed = user.feedback
+  if (!feedbackExists) {
+    const updatedFeedback = [...existFeed, feedback];
 
-  existFeed.forEach( async (element) => {
-    if (element.restaurantName === restaurantName && element.foodName === foodName) {
-      return
-    } else {
-      const updatedFeedback = [...(user.feedback || []), feedback];
+    await fetch(`http://localhost:3000/user/${userId}`, {
+      method: 'PATCH',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ feedback: updatedFeedback }),
+    });
 
-      await fetch(`http://localhost:3000/user/${userId}`, {
-        method: 'PATCH',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({ feedback: updatedFeedback })
-      });
-    }
-  })
+    console.log('Feedback atualizado:', updatedFeedback);
+  } else {
+    console.log('Feedback já existe:', feedback);
+  }
 }
 
 async function updateLikeButtons() {
