@@ -210,7 +210,8 @@ async function  renderData() {
 
   const likeBtn = document.querySelectorAll('.heart-btn')
   likeBtn.forEach((btn) => {
-      btn.addEventListener('click',() => {
+    if (btn) {
+      btn.addEventListener('click', async () => {
         if (!btn.classList.contains('liked')) {
           const userId = btn.dataset.userId
           const restaurantName = btn.dataset.restaurant
@@ -220,7 +221,9 @@ async function  renderData() {
           sendFeedBackLike(userId, restaurantName, foodName)
         }
       })
+    }
   })
+   updateLikeButtons()
   } catch (e) {
     console.error(`Erro ao processar dado: ${e}`);
   }
@@ -243,30 +246,31 @@ cartBtn.addEventListener('click', () => {
 
 
 async function sendFeedBackLike(userId, restaurantName, foodName) {
-  const feedback = { restaurantName, foodName };
 
-  const user = await fetch(`http://localhost:3000/user/${userId}`).then((res) => res.json());
+  const feedback = {
+    restaurantName,
+    foodName
+  };
 
-  const existFeed = user.feedback || [];
-  const feedbackExists = existFeed.some(
-    (element) => element.restaurantName === restaurantName && element.foodName === foodName
-  );
+  const user = await fetch(`http://localhost:3000/user/${userId}`).then((res) => res.json())
 
-  if (!feedbackExists) {
-    const updatedFeedback = [...existFeed, feedback];
+  const existFeed = user.feedback
+  console.log(existFeed);
+  
+  existFeed.forEach(async (element) => {
+    if (element.restaurantName !== restaurantName && element.foodName !== foodName) {
+      const updatedFeedback = [...(user.feedback) || [], feedback];
+      console.log(updateLikeButtons);
 
-    await fetch(`http://localhost:3000/user/${userId}`, {
-      method: 'PATCH',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ feedback: updatedFeedback }),
-    });
-
-    console.log('Feedback atualizado:', updatedFeedback);
-  } else {
-    console.log('Feedback já existe:', feedback);
-  }
+      await fetch(`http://localhost:3000/user/${userId}`, {
+        method: 'PATCH',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ feedback: updatedFeedback })
+      });
+    }
+  })
 }
 
 async function updateLikeButtons() {

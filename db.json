@@ -31,6 +31,18 @@
         {
           "restaurantName": "Restaurante La Pasta",
           "foodName": "Lasagna alla Bolognese"
+        },
+        {
+          "restaurantName": "Bistrô Delícias",
+          "foodName": "Bouef Bourguignon"
+        },
+        {
+          "restaurantName": "Churrascaria Gaúcha",
+          "foodName": "Picanha"
+        },
+        {
+          "restaurantName": "Restaurante La Pasta",
+          "foodName": "Bruschetta"
         }
       ]
     },
