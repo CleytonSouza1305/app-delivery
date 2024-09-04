@@ -211,25 +211,21 @@ async function  renderData() {
   const likeBtn = document.querySelectorAll('.heart-btn')
   likeBtn.forEach((btn) => {
     if (btn) {
-      btn.addEventListener('click', async () => {
-        if (!btn.classList.contains('liked')) {
+      btn.addEventListener('click', async (event) => {
+        event.preventDefault()
           const userId = btn.dataset.userId
           const restaurantName = btn.dataset.restaurant
           const foodName = btn.dataset.foodNameMenu
           btn.classList.add('liked')
 
-          sendFeedBackLike(userId, restaurantName, foodName)
-        }
+        await sendFeedBackLike(userId, restaurantName, foodName)
       })
     }
   })
-   updateLikeButtons()
   } catch (e) {
     console.error(`Erro ao processar dado: ${e}`);
   }
-
   console.log(restautantsArr);
-  
 }
 
 renderData()
@@ -254,24 +250,22 @@ async function sendFeedBackLike(userId, restaurantName, foodName) {
 
   const user = await fetch(`http://localhost:3000/user/${userId}`).then((res) => res.json())
 
-  const existFeed = user.feedback
-  console.log(existFeed);
+  const existFeed = user.feedback.some((f) => {
+    f.restaurantName === restaurantName && f.foodName === foodName
+  })
+
+  if (existFeed) return
   
-  existFeed.forEach(async (element) => {
-    if (element.restaurantName !== restaurantName && element.foodName !== foodName) {
-      const updatedFeedback = [...(user.feedback) || [], feedback];
-      console.log(updateLikeButtons);
+  user.feedback.push(feedback)
 
       await fetch(`http://localhost:3000/user/${userId}`, {
         method: 'PATCH',
         headers: {
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify({ feedback: updatedFeedback })
+        body: JSON.stringify({ feedback: user.feedback })
       });
     }
-  })
-}
 
 async function updateLikeButtons() {
   const user = await fetch(`http://localhost:3000/user/${localStorage.getItem('id')}`).then((result) => result.json())
@@ -279,14 +273,14 @@ async function updateLikeButtons() {
   const feedback = user.feedback
   
   const like = document.querySelectorAll('.heart-btn')
-  like.forEach((element) => {
-    feedback.filter((restaurante) => {
-      if (restaurante.foodName === element.dataset.foodNameMenu) {
-        element.classList.add('liked')
-      } else {
-        element.classList.remove('liked')
-      }
-    })
+  like.forEach((btn) => {
+    const isLiked = feedback.some((restaurante) => restaurante.foodName === btn.dataset.foodNameMenu && restaurante.restaurantName === btn.dataset.restaurant) 
+
+    if (isLiked) {
+      btn.classList.add('liked')
+    } else {
+      btn.classList.remove('liked')
+    }
   })
 }
 
