@@ -212,6 +212,8 @@ async function  renderData() {
   likeBtn.forEach((btn) => {
     if (btn) {
       btn.addEventListener('click', async (event) => {
+        console.log('preventdefault');
+        
         event.preventDefault()
           const userId = btn.dataset.userId
           const restaurantName = btn.dataset.restaurant
@@ -225,7 +227,6 @@ async function  renderData() {
   } catch (e) {
     console.error(`Erro ao processar dado: ${e}`);
   }
-  console.log(restautantsArr);
 }
 
 renderData()
@@ -242,29 +243,34 @@ cartBtn.addEventListener('click', () => {
 
 
 async function sendFeedBackLike(userId, restaurantName, foodName) {
-
+  
   const feedback = {
     restaurantName,
     foodName
   };
 
-  const user = await fetch(`http://localhost:3000/user/${userId}`).then((res) => res.json())
+  try {
+    const user = await fetch(`http://localhost:3000/user/${userId}`).then((res) => res.json())
 
-  const existFeed = user.feedback.some((f) => {
-    f.restaurantName === restaurantName && f.foodName === foodName
-  })
-
-  if (existFeed) return
+    const existFeed = user.feedback.some((f) => {
+      f.restaurantName === restaurantName && f.foodName === foodName
+    })
   
-  user.feedback.push(feedback)
-
-      await fetch(`http://localhost:3000/user/${userId}`, {
-        method: 'PATCH',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({ feedback: user.feedback })
-      });
+    if (existFeed) return
+    
+    user.feedback.push(feedback)
+  
+    await fetch(`http://localhost:3000/user/${userId}`, {
+      method: 'PATCH',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ feedback: user.feedback })
+    });
+  } catch (e) {
+    console.error(e);
+    
+  }
     }
 
 async function updateLikeButtons() {

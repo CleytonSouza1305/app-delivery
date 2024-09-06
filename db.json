@@ -9,52 +9,40 @@
       "address": "a",
       "feedback": [
         {
-          "restaurantName": "SushiJapa",
-          "foodName": "Sushi"
+          "restaurantName": "Restaurante Gourmet",
+          "foodName": "Filet Mignon"
         },
         {
           "restaurantName": "Restaurante Gourmet",
-          "foodName": "Panna Cotta"
-        },
-        {
-          "restaurantName": "Bistrô Delícias",
-          "foodName": "Tarte Tatin"
-        },
-        {
-          "restaurantName": "Restaurante La Pasta",
-          "foodName": "Spaghetti Carbonara"
-        },
-        {
-          "restaurantName": "Restaurante La Pasta",
-          "foodName": "Spaghetti Carbonara"
-        },
-        {
-          "restaurantName": "McDonald's",
-          "foodName": "Batata Frita GD"
-        },
-        {
-          "restaurantName": "La Casa de Hambúrguer",
-          "foodName": "Milkshake de Chocolate"
-        },
-        {
-          "restaurantName": "La Casa de Hambúrguer",
-          "foodName": "Milkshake de Chocolate"
-        },
-        {
-          "restaurantName": "Sabor Árabe",
-          "foodName": "Suco de Laranja"
-        },
-        {
-          "restaurantName": "McDonald's",
-          "foodName": "Big Mac"
+          "foodName": "Filet Mignon"
         },
         {
           "restaurantName": "Burger King",
           "foodName": "Bk Mix de  Brownie"
         },
         {
-          "restaurantName": "SushiJapa",
-          "foodName": "Tempura de Legumes"
+          "restaurantName": "Bistrô Delícias",
+          "foodName": "Coq au Vin"
+        },
+        {
+          "restaurantName": "Sabor Árabe",
+          "foodName": "Esfiha de Carne"
+        },
+        {
+          "restaurantName": "Sabor Árabe",
+          "foodName": "Esfiha de Carne"
+        },
+        {
+          "restaurantName": "Sabor Árabe",
+          "foodName": "Esfiha de Carne"
+        },
+        {
+          "restaurantName": "McDonald's",
+          "foodName": "Batata Frita GD"
+        },
+        {
+          "restaurantName": "McDonald's",
+          "foodName": "Batata Frita GD"
         }
       ]
     },
