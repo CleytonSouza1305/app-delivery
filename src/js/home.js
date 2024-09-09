@@ -230,6 +230,8 @@ async function  renderData() {
 
 renderData()
 
+updateLikeButtons()
+
 const cartBtn = document.querySelector('.cart-div')
 cartBtn.addEventListener('click', () => {
   const cart = document.querySelector('.carrinho')
@@ -270,7 +272,7 @@ async function sendFeedBackLike(userId, restaurantName, foodName) {
     console.error(e);
     
   }
-    }
+}
 
 async function updateLikeButtons() {
   const user = await fetch(`http://localhost:3000/user/${localStorage.getItem('id')}`).then((result) => result.json())
@@ -288,8 +290,6 @@ async function updateLikeButtons() {
     }
   })
 }
-
-document.addEventListener('DOMContentLoaded', updateLikeButtons)
 
 const restaurantesInCart = []
 async function addToCartFn(restaurantName, foodId) {
@@ -336,12 +336,16 @@ async function addToCartFn(restaurantName, foodId) {
   foodTotalOrder.replace('.', ',')
   const total = document.querySelector('.total')
   total.textContent = `R$ ${foodTotalOrder}`
+  total.dataset.totalPrice = foodTotalOrder
 
   console.log(restaurantesInCart);
 }
 
-addToCartFn('Grill & Smoke', 3)
-addToCartFn('Grill & Smoke', 3)
-addToCartFn('Grill & Smoke', 3)
-addToCartFn('Grill & Smoke', 2)
-addToCartFn('Grill & Smoke', 3)
+const addToCartBtn = document.querySelectorAll('.add-to-cart-btn')
+addToCartBtn.forEach((btn) => {
+  btn.addEventListener('click', () => {
+    const idMenu = btn.dataset.menuId
+    const restName = btn.dataset.name
+    addToCartFn(restName, idMenu)
+  })
+})
