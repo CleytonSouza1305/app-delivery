@@ -9,40 +9,12 @@
       "address": "a",
       "feedback": [
         {
-          "restaurantName": "Restaurante Gourmet",
-          "foodName": "Filet Mignon"
-        },
-        {
-          "restaurantName": "Restaurante Gourmet",
-          "foodName": "Filet Mignon"
-        },
-        {
           "restaurantName": "Burger King",
           "foodName": "Bk Mix de  Brownie"
         },
         {
-          "restaurantName": "Bistrô Delícias",
-          "foodName": "Coq au Vin"
-        },
-        {
-          "restaurantName": "Sabor Árabe",
-          "foodName": "Esfiha de Carne"
-        },
-        {
-          "restaurantName": "Sabor Árabe",
-          "foodName": "Esfiha de Carne"
-        },
-        {
-          "restaurantName": "Sabor Árabe",
-          "foodName": "Esfiha de Carne"
-        },
-        {
           "restaurantName": "McDonald's",
-          "foodName": "Batata Frita GD"
-        },
-        {
-          "restaurantName": "McDonald's",
-          "foodName": "Batata Frita GD"
+          "foodName": "McFlurry"
         }
       ]
     },
@@ -75,7 +47,8 @@
           "imageFood": "https://i.ytimg.com/vi/3IE2W64k0Ys/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLDL71UsHE9hWEbV3lSI_oeARgBQqQ",
           "discountPercentage": 0,
           "foodCategory": [
-            "hamburger"
+            "hamburger",
+            "fast-food"
           ]
         },
         {
@@ -85,7 +58,8 @@
           "imageFood": "https://static.ifood-static.com.br/image/upload/t_high/pratos/6e73dce2-a17f-4aef-9035-1409cea198fe/202306291447_KBBF_i.jpg",
           "discountPercentage": 0,
           "foodCategory": [
-            "hamburger"
+            "hamburger",
+            "fast-food"
           ]
         },
         {
@@ -95,7 +69,8 @@
           "imageFood": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR91B0HZrX-AsHFIKOBR6jPDMe3YAQ-NzJwyg&s",
           "discountPercentage": 0,
           "foodCategory": [
-            "acompanhamento"
+            "acompanhamento",
+            "fast-food"
           ]
         },
         {
@@ -116,7 +91,8 @@
           "imageFood": "https://static.ifood-static.com.br/image/upload/t_high/pratos/6e73dce2-a17f-4aef-9035-1409cea198fe/202202012155_4K3W_i.jpg",
           "discountPercentage": 0,
           "foodCategory": [
-            "sobremesa"
+            "sobremesa",
+            "gelado"
           ]
         }
       ]
@@ -139,7 +115,8 @@
           "imageFood": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbwD1XA-YAKxXGRh-oM4Zzi-g3A5heN7TH3g&s",
           "discountPercentage": 0,
           "foodCategory": [
-            "hamburger"
+            "hamburger",
+            "fast-food"
           ]
         },
         {
@@ -149,7 +126,8 @@
           "imageFood": "https://static.wixstatic.com/media/d919ff_422c4189e8b54bcd9d9bab6d29707676~mv2.jpg/v1/fill/w_640,h_364,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/d919ff_422c4189e8b54bcd9d9bab6d29707676~mv2.jpg",
           "discountPercentage": 0,
           "foodCategory": [
-            "hamburger"
+            "hamburger",
+            "fast-food"
           ]
         },
         {
@@ -159,7 +137,8 @@
           "imageFood": "https://photos.enjoei.com.br/ima-chicken-mc-nuggets-mcdonald-s-97752835/800x800/czM6Ly9waG90b3MuZW5qb2VpLmNvbS5ici9wcm9kdWN0cy8yODE2NjE2Ny82M2QxZDlhZTE1MjE2NDg4ODExMTc0OTc2ZjZlYzk2ZS5qcGc",
           "discountPercentage": 0,
           "foodCategory": [
-            "acompanhamento"
+            "acompanhamento",
+            "fast-food"
           ]
         },
         {
@@ -169,7 +148,8 @@
           "imageFood": "https://i.pinimg.com/originals/f5/88/79/f588792d1d78a834ac369fcd89eea1b6.jpg",
           "discountPercentage": 0,
           "foodCategory": [
-            "sobremesa"
+            "sobremesa",
+            "gelado"
           ]
         },
         {
@@ -179,7 +159,8 @@
           "imageFood": "https://www.tupi.fm/wp-content/uploads/2022/05/macfritas.jpg",
           "discountPercentage": 0,
           "foodCategory": [
-            "acompanhamento"
+            "acompanhamento",
+            "fast-food"
           ]
         }
       ]
@@ -445,7 +426,8 @@
           "imageFood": "https://s.zst.com.br/cms-assets/2022/02/design-sem-nome-2022-02-22t145101.508.webp",
           "discountPercentage": 0,
           "foodCategory": [
-            "bebida"
+            "bebida",
+            "acompanhamento"
           ]
         },
         {
@@ -550,7 +532,8 @@
           "imageFood": "https://www.saboresajinomoto.com.br/uploads/images/recipes/cheese-salada-burguer.jpg",
           "discountPercentage": 0,
           "foodCategory": [
-            "hamburger"
+            "hamburger",
+            "fast-food"
           ]
         },
         {
@@ -560,7 +543,8 @@
           "imageFood": "https://ogimg.infoglobo.com.br/in/23479747-134-388/FT1086A/760/Burgers.ComeggFoto-Rodrigo-Azevedo.jpg",
           "discountPercentage": 0,
           "foodCategory": [
-            "hamburger"
+            "hamburger",
+            "fast-food"
           ]
         },
         {
@@ -570,7 +554,8 @@
           "imageFood": "https://gastronomiacarioca.zonasul.com.br/wp-content/uploads/2023/05/batata_frita_destaque_ilustrativo_zona_sul.jpg",
           "discountPercentage": 0,
           "foodCategory": [
-            "acompanhamento"
+            "acompanhamento",
+            "fast-food"
           ]
         },
         {
@@ -637,7 +622,8 @@
           "imageFood": "https://s2.glbimg.com/E1WXXtiXeTi1DyT5Y1O3uf2DICs=/e.glbimg.com/og/ed/f/original/2019/01/15/31617293018_896bf29d55_k.jpg",
           "discountPercentage": 0,
           "foodCategory": [
-            "bebida"
+            "bebida",
+            "acompanhamento"
           ]
         },
         {
@@ -774,7 +760,8 @@
           "imageFood": "https://img.imageboss.me/consul/cdn/animation:true/wp-content/uploads/2021/08/imagem_feed_01-36.png",
           "discountPercentage": 0,
           "foodCategory": [
-            "bebida"
+            "bebida",
+            "acompanhamento"
           ]
         },
         {

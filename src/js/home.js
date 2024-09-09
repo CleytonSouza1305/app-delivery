@@ -212,7 +212,6 @@ async function  renderData() {
   likeBtn.forEach((btn) => {
     if (btn) {
       btn.addEventListener('click', async (event) => {
-        console.log('preventdefault');
         
         event.preventDefault()
           const userId = btn.dataset.userId
@@ -290,5 +289,35 @@ async function updateLikeButtons() {
   })
 }
 
-updateLikeButtons()
+document.addEventListener('DOMContentLoaded', updateLikeButtons)
 
+async function addToCartFn(restaurantName, foodId) {
+  const response = await fetch(`http://localhost:3000/restaurants`).then((r) => r)
+  const restaurant = await response.json()
+  const restaurantesInCart = []
+
+  // restaurant.forEach((el) => {
+  //   if (el.name === restaurantName) {
+  //     const menu = el.menu
+  //     menu.forEach((r) => {
+  //       if (r.id === foodId) {
+  //         restaurantesInCart.forEach((el) => {
+  //           if (el.name === r.name) {
+  //             el.quantity++
+  //           } else {
+  //             r.quantity = 0
+  //             restaurantesInCart.push(r)
+  //           }
+  //         })
+  //       }
+  //     })
+  //   }
+  // })
+
+  const spanEl = document.querySelector('#quantity')
+  spanEl.textContent = `(${restaurantesInCart.length})`
+
+  console.log(restaurantesInCart);
+}
+
+addToCartFn('Grill & Smoke', 3)
