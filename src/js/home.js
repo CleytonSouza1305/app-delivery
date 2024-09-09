@@ -291,33 +291,57 @@ async function updateLikeButtons() {
 
 document.addEventListener('DOMContentLoaded', updateLikeButtons)
 
+const restaurantesInCart = []
 async function addToCartFn(restaurantName, foodId) {
   const response = await fetch(`http://localhost:3000/restaurants`).then((r) => r)
   const restaurant = await response.json()
-  const restaurantesInCart = []
 
-  // restaurant.forEach((el) => {
-  //   if (el.name === restaurantName) {
-  //     const menu = el.menu
-  //     menu.forEach((r) => {
-  //       if (r.id === foodId) {
-  //         restaurantesInCart.forEach((el) => {
-  //           if (el.name === r.name) {
-  //             el.quantity++
-  //           } else {
-  //             r.quantity = 0
-  //             restaurantesInCart.push(r)
-  //           }
-  //         })
-  //       }
-  //     })
-  //   }
-  // })
+  restaurant.forEach((el) => {
+    if (el.name === restaurantName) {
+      const menu = el.menu
+      menu.forEach((r) => {
+        
+        if (r.id === foodId) {
+          const existFood = restaurantesInCart.find((item) => item.id === foodId) 
+
+          if (existFood) {
+            existFood.quantity++
+            existFood.price = existFood.price * 2 
+          } else {
+            const food = {
+              id: r.id,
+              name: r.name,
+              price: r.price,
+              imageFood: r.imageFood,
+              discount: r.discountPercentage,
+              quantity: 1
+              }
+              restaurantesInCart.push(food)
+          }
+        }
+      })
+    }
+  })
+
+  let finalTotalQuantity = 0
+  let foodTotalOrder = 0
+  for (let i = 0; i < restaurantesInCart.length; i++) {
+    finalTotalQuantity += restaurantesInCart[i].quantity
+    foodTotalOrder += restaurantesInCart[i].price
+  }
 
   const spanEl = document.querySelector('#quantity')
-  spanEl.textContent = `(${restaurantesInCart.length})`
+  spanEl.textContent = `(${finalTotalQuantity})`
+
+  foodTotalOrder.replace('.', ',')
+  const total = document.querySelector('.total')
+  total.textContent = `R$ ${foodTotalOrder}`
 
   console.log(restaurantesInCart);
 }
 
+addToCartFn('Grill & Smoke', 3)
+addToCartFn('Grill & Smoke', 3)
+addToCartFn('Grill & Smoke', 3)
+addToCartFn('Grill & Smoke', 2)
 addToCartFn('Grill & Smoke', 3)

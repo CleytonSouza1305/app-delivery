@@ -76,7 +76,7 @@
         {
           "id": 4,
           "name": "Milkshake de Chocolate",
-          "price": 18,
+          "price": 18.99,
           "imageFood": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIfxhr0YHUq4Chpr7-kH4ykelPxbihFQV8YQ&s",
           "discountPercentage": 0,
           "foodCategory": [
@@ -87,7 +87,7 @@
         {
           "id": 5,
           "name": "Bk Mix de  Brownie",
-          "price": 14,
+          "price": 14.99,
           "imageFood": "https://static.ifood-static.com.br/image/upload/t_high/pratos/6e73dce2-a17f-4aef-9035-1409cea198fe/202202012155_4K3W_i.jpg",
           "discountPercentage": 0,
           "foodCategory": [
@@ -144,7 +144,7 @@
         {
           "id": 4,
           "name": "McFlurry",
-          "price": 16,
+          "price": 16.99,
           "imageFood": "https://i.pinimg.com/originals/f5/88/79/f588792d1d78a834ac369fcd89eea1b6.jpg",
           "discountPercentage": 0,
           "foodCategory": [
