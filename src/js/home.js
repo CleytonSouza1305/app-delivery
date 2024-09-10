@@ -203,7 +203,7 @@ async function  renderData() {
 
         bottomDiv.append(addToCart, price)
 
-        card.append(h2Title, image, foodName,div, feedBackDiv, bottomDiv)
+        card.append(h2Title, image, foodName, div, feedBackDiv, bottomDiv)
         container.append(card)
       }
   }
@@ -223,6 +223,17 @@ async function  renderData() {
       })
     }
   })
+
+  const addToCartBtn = document.querySelectorAll('.add-to-cart-btn')
+
+  addToCartBtn.forEach((btn) => {
+  
+  btn.addEventListener('click', () => {
+    const idMenu = btn.dataset.menuId
+    const restName = btn.dataset.name
+    addToCartFn(restName, idMenu)
+  })
+})
   } catch (e) {
     console.error(`Erro ao processar dado: ${e}`);
   }
@@ -293,6 +304,7 @@ async function updateLikeButtons() {
 
 const restaurantesInCart = []
 async function addToCartFn(restaurantName, foodId) {
+  
   const response = await fetch(`http://localhost:3000/restaurants`).then((r) => r)
   const restaurant = await response.json()
 
@@ -301,12 +313,12 @@ async function addToCartFn(restaurantName, foodId) {
       const menu = el.menu
       menu.forEach((r) => {
         
-        if (r.id === foodId) {
-          const existFood = restaurantesInCart.find((item) => item.id === foodId) 
-
+        if (r.id === parseFloat(foodId)) {
+          
+          const existFood = restaurantesInCart.find((item) => item.id === parseFloat(foodId)) 
           if (existFood) {
-            existFood.quantity++
-            existFood.price = existFood.price * 2 
+            existFood.quantity += 1
+            existFood.currentPrice = existFood.price * existFood.quantity
           } else {
             const food = {
               id: r.id,
@@ -314,7 +326,8 @@ async function addToCartFn(restaurantName, foodId) {
               price: r.price,
               imageFood: r.imageFood,
               discount: r.discountPercentage,
-              quantity: 1
+              quantity: 1,
+              currentPrice: r.price
               }
               restaurantesInCart.push(food)
           }
@@ -333,19 +346,26 @@ async function addToCartFn(restaurantName, foodId) {
   const spanEl = document.querySelector('#quantity')
   spanEl.textContent = `(${finalTotalQuantity})`
 
-  foodTotalOrder.replace('.', ',')
   const total = document.querySelector('.total')
-  total.textContent = `R$ ${foodTotalOrder}`
+  total.textContent = `R$ ${foodTotalOrder.toFixed(2)}`
   total.dataset.totalPrice = foodTotalOrder
 
   console.log(restaurantesInCart);
+
+  const cartContent = document.querySelector('.content-cart')
+  cartContent.innerHTML = ''
+
+  for (let i = 0; i < restaurantesInCart.length; i++) {
+    const cardTotalCart = document.createElement('div')
+    cardTotalCart.classList.add('card-total-cart')
+
+    const foodTitle = document.createElement('h3')
+    foodTitle.textContent = restaurantesInCart[i].name
+    foodTitle.classList.add('food-title')
+
+    cardTotalCart.append(foodTitle)
+    cartContent.append(cardTotalCart)
+  }
 }
 
-const addToCartBtn = document.querySelectorAll('.add-to-cart-btn')
-addToCartBtn.forEach((btn) => {
-  btn.addEventListener('click', () => {
-    const idMenu = btn.dataset.menuId
-    const restName = btn.dataset.name
-    addToCartFn(restName, idMenu)
-  })
-})
+

@@ -15,6 +15,10 @@
         {
           "restaurantName": "McDonald's",
           "foodName": "McFlurry"
+        },
+        {
+          "restaurantName": "Sabor Árabe",
+          "foodName": "Esfiha de Carne"
         }
       ]
     },
