@@ -400,13 +400,14 @@ display: none;
 
 .cart-openned {
   right: 0;
+  top: -20px;
 }
 
 .header-cart {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem 0.5rem;
+  padding: 0.5rem;
   border-bottom: 2px solid #000;
   font-weight: bold;
 }
@@ -454,4 +455,99 @@ display: none;
   background-color: var(--principal-color);
   color: #f4f5f6;
   border: none;
+}
+
+.content-cart {
+  overflow-y: scroll;
+  height: 393px;
+}
+
+.content-cart .card-total-cart {
+  padding: 0.7rem 0.5rem;
+  height: 115px;
+  width: 100%;
+  border-bottom: 2px solid #575757;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.content-cart .card-total-cart img {
+  width: 65px;
+  height: 65px;
+  border-radius: 6px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.content-cart .card-total-cart .info-cart {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.content-cart .card-total-cart .info-cart h3 {
+  margin-bottom: 14px;
+}
+
+.quantity-elements {
+  width: 135px;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.quantity-elements .quantity-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  border: 1px solid #007bff; 
+  background-color: #007bff; 
+  color: #ffffff; 
+  border-radius: 4px; 
+  width: 32px;
+  height: 32px;
+  padding: 0.3rem 0.6rem;
+  text-align: center;
+  cursor: pointer; 
+  transition: background-color 0.3s, border-color 0.3s; 
+}
+
+.quantity-elements .quantity-button:hover {
+  background-color: #0056b3; 
+  border-color: #004085; 
+}
+
+.current-price {
+  color: #414141;
+  font-weight: 600;
+}
+
+.trash-btn {
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--principal-color); 
+  background-color: var(--principal-color);  
+  color: #ffffff; 
+  border-radius: 4px; 
+  width: 32px;
+  height: 32px;
+  padding: 0.3rem 0.6rem;
+  text-align: center;
+  cursor: pointer; 
+  transition: background-color 0.3s, border-color 0.3s; 
+  margin-top: 14px;
+}
+
+.trash-btn:hover {
+  background-color: hsl(356, 83%, 42%);
+  border-color: hsl(356, 83%, 32%);
 }

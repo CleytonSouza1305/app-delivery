@@ -159,7 +159,7 @@
         {
           "id": 5,
           "name": "Batata Frita GD",
-          "price": 12,
+          "price": 12.99,
           "imageFood": "https://www.tupi.fm/wp-content/uploads/2022/05/macfritas.jpg",
           "discountPercentage": 0,
           "foodCategory": [
@@ -183,7 +183,7 @@
         {
           "id": 1,
           "name": "Sushi",
-          "price": 29,
+          "price": 29.99,
           "imageFood": "https://static.wixstatic.com/media/f9b308_1c5f63bb08554629a0bad7ea90247378~mv2.jpg/v1/fill/w_640,h_426,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/f9b308_1c5f63bb08554629a0bad7ea90247378~mv2.jpg",
           "discountPercentage": 0,
           "foodCategory": [
@@ -194,7 +194,7 @@
         {
           "id": 2,
           "name": "Tempura de Legumes",
-          "price": 25,
+          "price": 25.99,
           "imageFood": "https://i.ytimg.com/vi/Gl8bgyviQTw/maxresdefault.jpg",
           "discountPercentage": 0,
           "foodCategory": [
@@ -205,7 +205,7 @@
         {
           "id": 3,
           "name": "Sashimi",
-          "price": 34,
+          "price": 34.99,
           "imageFood": "https://images.tcdn.com.br/img/img_prod/842178/salmao_fresco_fatiado_tipo_sashimi_77_1_20200903170409.jpg",
           "discountPercentage": 0,
           "foodCategory": [
@@ -216,7 +216,7 @@
         {
           "id": 4,
           "name": "Ramen",
-          "price": 27,
+          "price": 27.99,
           "imageFood": "https://assets.tmecosys.com/image/upload/t_web767x639/img/recipe/ras/Assets/17eefccc0612317aa9f2ce1fbaae56cc/Derivates/3740e0c14b97c50890905a1961b9eb542959cc06.jpg",
           "discountPercentage": 0,
           "foodCategory": [
@@ -227,7 +227,7 @@
         {
           "id": 5,
           "name": "Gyoza",
-          "price": 18,
+          "price": 18.99,
           "imageFood": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7ZCE9uPWOv3g-gbpx_xCq3xTbdhZgD72c3g&s",
           "discountPercentage": 0,
           "foodCategory": [
@@ -251,7 +251,7 @@
         {
           "id": 1,
           "name": "Filet Mignon",
-          "price": 49,
+          "price": 49.99,
           "imageFood": "https://hips.hearstapps.com/hmg-prod/images/filet-mignon-index-66c4b19cc80ba.jpeg?crop=1.00xw:1.00xh;0,0&resize=1200:*",
           "discountPercentage": 0,
           "foodCategory": [
@@ -262,7 +262,7 @@
         {
           "id": 2,
           "name": "Risoto de Camarão",
-          "price": 42,
+          "price": 42.99,
           "imageFood": "https://www.unileverfoodsolutions.com.br/dam/global-ufs/mcos/SLA/calcmenu/recipes/BR-recipes/general/risoto-de-camar%C3%A3o/main-header.jpg",
           "discountPercentage": 0,
           "foodCategory": [

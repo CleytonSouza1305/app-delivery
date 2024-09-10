@@ -191,6 +191,7 @@ async function  renderData() {
         addToCart.type = 'button'
         addToCart.classList.add('add-to-cart-btn')
         addToCart.dataset.menuId = menu[j].id
+        addToCart.dataset.FoodName = menu[j].name
         addToCart.dataset.name = restautantsArr[i].name
         addToCart.textContent = '+'
 
@@ -231,7 +232,8 @@ async function  renderData() {
   btn.addEventListener('click', () => {
     const idMenu = btn.dataset.menuId
     const restName = btn.dataset.name
-    addToCartFn(restName, idMenu)
+    const foodName = btn.dataset.FoodName
+    addToCartFn(restName, idMenu, foodName)
   })
 })
   } catch (e) {
@@ -303,7 +305,7 @@ async function updateLikeButtons() {
 }
 
 const restaurantesInCart = []
-async function addToCartFn(restaurantName, foodId) {
+async function addToCartFn(restaurantName, foodId, dataFoodName) {
   
   const response = await fetch(`http://localhost:3000/restaurants`).then((r) => r)
   const restaurant = await response.json()
@@ -313,9 +315,9 @@ async function addToCartFn(restaurantName, foodId) {
       const menu = el.menu
       menu.forEach((r) => {
         
-        if (r.id === parseFloat(foodId)) {
+        if (r.id === parseFloat(foodId) && r.name === dataFoodName) {
           
-          const existFood = restaurantesInCart.find((item) => item.id === parseFloat(foodId)) 
+          const existFood = restaurantesInCart.find((item) => item.id === parseFloat(foodId) && item.name === dataFoodName) 
           if (existFood) {
             existFood.quantity += 1
             existFood.currentPrice = existFood.price * existFood.quantity
@@ -352,20 +354,73 @@ async function addToCartFn(restaurantName, foodId) {
 
   console.log(restaurantesInCart);
 
-  const cartContent = document.querySelector('.content-cart')
-  cartContent.innerHTML = ''
+  const cartContent = document.querySelector('.content-cart');
+    if (cartContent) {
+      cartContent.innerHTML = '';
 
-  for (let i = 0; i < restaurantesInCart.length; i++) {
-    const cardTotalCart = document.createElement('div')
-    cardTotalCart.classList.add('card-total-cart')
+      restaurantesInCart.forEach(item => {
+        const cardTotalCart = document.createElement('div');
+        cardTotalCart.classList.add('card-total-cart');
 
-    const foodTitle = document.createElement('h3')
-    foodTitle.textContent = restaurantesInCart[i].name
-    foodTitle.classList.add('food-title')
+        const image = document.createElement('img')
+        image.classList.add('cart-food-image')
+        image.src = item.imageFood
 
-    cardTotalCart.append(foodTitle)
-    cartContent.append(cardTotalCart)
-  }
+        const infoCart = document.createElement('div')
+        infoCart.classList.add('info-cart')
+
+        const foodTitle = document.createElement('h3');
+        foodTitle.textContent = `${item.name}`;
+        foodTitle.classList.add('food-title');
+
+        const quantityDiv = document.createElement('div')
+        quantityDiv.classList.add('quantity-div')
+
+        const moreQuantity = document.createElement('span')
+        const menosQuantity = document.createElement('span')
+        moreQuantity.classList.add('quantity-button')
+        menosQuantity.classList.add('quantity-button')
+        moreQuantity.innerHTML = `<i class="fa-solid fa-plus"></i>`
+        menosQuantity.innerHTML = `<i class="fa-solid fa-minus"></i>`
+
+        const quantityValue = document.createElement('span')
+        quantityValue.classList.add('quantity-value')
+        quantityValue.textContent = item.quantity
+
+        const currentPrice = document.createElement('p')
+        currentPrice.classList.add('current-price')
+        currentPrice.textContent = `R$ ${item.currentPrice}`
+
+        const quantityElements = document.createElement('div')
+        quantityElements.classList.add('quantity-elements')
+
+        quantityElements.append(menosQuantity, quantityValue, moreQuantity)
+
+        quantityDiv.append(quantityElements ,currentPrice)
+
+        const trashBtn = document.createElement('div')
+        trashBtn.classList.add('trash-btn')
+        trashBtn.innerHTML = `<i class="fa-solid fa-trash-can"></i>`
+        trashBtn.dataset.itemName = item.name
+
+        infoCart.append(foodTitle, quantityDiv)
+
+        cardTotalCart.append(image, infoCart, trashBtn);
+        cartContent.append(cardTotalCart);
+      });
+    }
+
+
+    const closeBtn = document.querySelectorAll('.trash-btn')
+    closeBtn.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const index = restaurantesInCart.findIndex((res) => res.name === btn.dataset.itemName)
+        if (index !== -1) {
+          restaurantesInCart.splice(index, 1)
+        } 
+      })
+    })
+    
 }
 
 
