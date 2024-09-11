@@ -193,7 +193,7 @@ async function  renderData() {
         addToCart.dataset.menuId = menu[j].id
         addToCart.dataset.FoodName = menu[j].name
         addToCart.dataset.name = restautantsArr[i].name
-        addToCart.textContent = '+'
+        addToCart.innerHTML = `<i class="fa-solid fa-plus"></i>`;
 
         const bottomDiv = document.createElement('div')
         bottomDiv.classList.add('bottom-div')
@@ -248,9 +248,9 @@ updateLikeButtons()
 const cartBtn = document.querySelector('.cart-div')
 cartBtn.addEventListener('click', () => {
   const cart = document.querySelector('.carrinho')
-  cart.classList.add('cart-openned')
+  cart.classList.toggle('cart-openned')
 
-  document.querySelector('#close-btn').addEventListener('click', () => {
+    document.querySelector('#close-btn').addEventListener('click', () => {
     cart.classList.remove('cart-openned')
   })
 })
@@ -338,89 +338,91 @@ async function addToCartFn(restaurantName, foodId, dataFoodName) {
     }
   })
 
-  let finalTotalQuantity = 0
-  let foodTotalOrder = 0
-  for (let i = 0; i < restaurantesInCart.length; i++) {
-    finalTotalQuantity += restaurantesInCart[i].quantity
-    foodTotalOrder += restaurantesInCart[i].price
-  }
-
-  const spanEl = document.querySelector('#quantity')
-  spanEl.textContent = `(${finalTotalQuantity})`
-
-  const total = document.querySelector('.total')
-  total.textContent = `R$ ${foodTotalOrder.toFixed(2)}`
-  total.dataset.totalPrice = foodTotalOrder
-
-  console.log(restaurantesInCart);
-
-  const cartContent = document.querySelector('.content-cart');
+  function updateCart() {
+    let finalTotalQuantity = 0;
+    let foodTotalOrder = 0;
+  
+    for (let i = 0; i < restaurantesInCart.length; i++) {
+      finalTotalQuantity += restaurantesInCart[i].quantity;
+      foodTotalOrder += restaurantesInCart[i].currentPrice;
+    }
+  
+    const spanEl = document.querySelector('#quantity');
+    spanEl.textContent = `(${finalTotalQuantity})`;
+  
+    const total = document.querySelector('.total');
+    total.textContent = `R$ ${foodTotalOrder.toFixed(2)}`;
+    total.dataset.totalPrice = foodTotalOrder;
+  
+    const cartContent = document.querySelector('.content-cart');
     if (cartContent) {
       cartContent.innerHTML = '';
-
+  
       restaurantesInCart.forEach(item => {
         const cardTotalCart = document.createElement('div');
         cardTotalCart.classList.add('card-total-cart');
-
-        const image = document.createElement('img')
-        image.classList.add('cart-food-image')
-        image.src = item.imageFood
-
-        const infoCart = document.createElement('div')
-        infoCart.classList.add('info-cart')
-
+  
+        const image = document.createElement('img');
+        image.classList.add('cart-food-image');
+        image.src = item.imageFood;
+  
+        const infoCart = document.createElement('div');
+        infoCart.classList.add('info-cart');
+  
         const foodTitle = document.createElement('h3');
-        foodTitle.textContent = `${item.name}`;
+        foodTitle.textContent = item.name;
         foodTitle.classList.add('food-title');
-
-        const quantityDiv = document.createElement('div')
-        quantityDiv.classList.add('quantity-div')
-
-        const moreQuantity = document.createElement('span')
-        const menosQuantity = document.createElement('span')
-        moreQuantity.classList.add('quantity-button')
-        menosQuantity.classList.add('quantity-button')
-        moreQuantity.innerHTML = `<i class="fa-solid fa-plus"></i>`
-        menosQuantity.innerHTML = `<i class="fa-solid fa-minus"></i>`
-
-        const quantityValue = document.createElement('span')
-        quantityValue.classList.add('quantity-value')
-        quantityValue.textContent = item.quantity
-
-        const currentPrice = document.createElement('p')
-        currentPrice.classList.add('current-price')
-        currentPrice.textContent = `R$ ${item.currentPrice}`
-
-        const quantityElements = document.createElement('div')
-        quantityElements.classList.add('quantity-elements')
-
-        quantityElements.append(menosQuantity, quantityValue, moreQuantity)
-
-        quantityDiv.append(quantityElements ,currentPrice)
-
-        const trashBtn = document.createElement('div')
-        trashBtn.classList.add('trash-btn')
-        trashBtn.innerHTML = `<i class="fa-solid fa-trash-can"></i>`
-        trashBtn.dataset.itemName = item.name
-
-        infoCart.append(foodTitle, quantityDiv)
-
+  
+        const quantityDiv = document.createElement('div');
+        quantityDiv.classList.add('quantity-div');
+  
+        const moreQuantity = document.createElement('span');
+        const menosQuantity = document.createElement('span');
+        moreQuantity.classList.add('quantity-button');
+        menosQuantity.classList.add('quantity-button');
+        moreQuantity.innerHTML = `<i class="fa-solid fa-plus"></i>`;
+        menosQuantity.innerHTML = `<i class="fa-solid fa-minus"></i>`;
+  
+        const quantityValue = document.createElement('span');
+        quantityValue.classList.add('quantity-value');
+        quantityValue.textContent = item.quantity;
+  
+        const currentPrice = document.createElement('p');
+        currentPrice.classList.add('current-price');
+        currentPrice.textContent = `R$ ${item.currentPrice.toFixed(2)}`;
+  
+        const quantityElements = document.createElement('div');
+        quantityElements.classList.add('quantity-elements');
+  
+        quantityElements.append(menosQuantity, quantityValue, moreQuantity);
+  
+        quantityDiv.append(quantityElements, currentPrice);
+  
+        const trashBtn = document.createElement('div');
+        trashBtn.classList.add('trash-btn');
+        trashBtn.innerHTML = `<i class="fa-solid fa-trash-can"></i>`;
+        trashBtn.dataset.itemName = item.name;
+  
+        infoCart.append(foodTitle, quantityDiv);
+  
         cardTotalCart.append(image, infoCart, trashBtn);
         cartContent.append(cardTotalCart);
       });
+  
+      const closeBtn = document.querySelectorAll('.trash-btn');
+      closeBtn.forEach((btn) => {
+        btn.addEventListener('click', () => {
+          const index = restaurantesInCart.findIndex((res) => res.name === btn.dataset.itemName);
+          if (index !== -1) {
+            restaurantesInCart.splice(index, 1);
+            updateCart();
+          }
+        });
+      });
     }
-
-
-    const closeBtn = document.querySelectorAll('.trash-btn')
-    closeBtn.forEach((btn) => {
-      btn.addEventListener('click', () => {
-        const index = restaurantesInCart.findIndex((res) => res.name === btn.dataset.itemName)
-        if (index !== -1) {
-          restaurantesInCart.splice(index, 1)
-        } 
-      })
-    })
-    
+  }
+  
+  updateCart();  
 }
 
 

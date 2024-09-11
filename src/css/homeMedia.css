@@ -1,0 +1,37 @@
+@media (min-width: 1200px) and (max-width: 1919px) {
+  .cards-all-restaurants {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 3rem;
+    padding-bottom: 4rem;
+  }
+
+  .card-menu {
+    width: 300px;
+    height: 400px;
+  }
+
+  .card-menu img {
+    height: 170px;
+  }
+
+  .menu-title {
+    font-size: 1.4rem;
+  }
+  
+  .name-menu-food {
+    font-size: 1.3rem;
+  }
+  
+  .categories-menu {
+    gap: 80px;
+  }
+
+  .stars .star {
+    font-size: 2rem !important;
+  }
+  
+  .heart-btn {
+    font-size: 2.5rem !important;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+}

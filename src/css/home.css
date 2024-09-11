@@ -449,12 +449,19 @@ display: none;
 
 .bottom-div button {
   width: 50px;
-  font-size: 1.5rem;
+  height: 30px;
+  font-size: 1rem;
+  font-weight: 700;
   border-radius: 6px;
   cursor: pointer;
   background-color: var(--principal-color);
   color: #f4f5f6;
   border: none;
+  transition: var(--animed-transition);
+}
+
+.bottom-div button:hover {
+  background-color: hsl(356, 83%, 38%);
 }
 
 .content-cart {
