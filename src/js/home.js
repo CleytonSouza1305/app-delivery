@@ -67,46 +67,41 @@ async function randomRestaurantSlider() {
 randomRestaurantSlider()
 
 function promotionalBannerLoop() {
-  const imageSrc = document.getElementById('banner-image')
+  const imageSrc = document.getElementById('banner-image');
+  const banners = [
+    { src: '../imgs/promotional-banner-1.avif', category: 'hamburguer' },
+    { src: '../imgs/promotional-banner-2.jpg!w700wp', category: 'pizza' },
+    { src: '../imgs/promotional-banner-3.jpg', category: 'comida japonesa' },
+    { src: '../imgs/promotional-banner-4.avif', category: 'massa' },
+    { src: '../imgs/promotional-banner-5.jpg', category: 'sobremesa' },
+    { src: '../imgs/promotional-banner-6.jpg', category: 'fast-food' }
+  ];
 
-  let interval = 0
+  let interval = 0;
+
+  function updateBanner() {
+    const banner = banners[interval];
+    imageSrc.src = banner.src;
+    imageSrc.dataset.category = banner.category;
+  }
+  updateBanner();
 
   setInterval(() => {
-    interval++ 
-    imageSrc.src = '../imgs/promotional-banner-1.avif'
-    imageSrc.dataset.category = 'hamburguer'
-    
-    if (interval === 2) {
-      imageSrc.src = '../imgs/promotional-banner-2.jpg!w700wp'
-      imageSrc.dataset.category = 'pizza'
-    } else if (interval === 3) {
-      imageSrc.src = '../imgs/promotional-banner-3.jpg'
-      imageSrc.dataset.category = 'comida japonesa'
-    } else if (interval === 4) {
-      imageSrc.src = '../imgs/promotional-banner-4.avif'
-      imageSrc.dataset.category = 'massa'
-    } else if (interval === 5) {
-      imageSrc.src = '../imgs/promotional-banner-5.jpg'
-      imageSrc.dataset.category = 'sobremesa'
-    } else if (interval === 6) {
-      imageSrc.src = '../imgs/promotional-banner-6.jpg'
-      imageSrc.dataset.category = 'fast-food'
-      interval = 0
-    }
-  }, 1000 * 5)
+    interval = (interval + 1) % banners.length;
+    updateBanner();
+  }, 1000 * 5);
 
-  const arrows = document.querySelectorAll('.arrows')
+  const arrows = document.querySelectorAll('.arrows');
   arrows.forEach((arrow) => {
     arrow.addEventListener('click', () => {
-      if (arrow.id === 'left-image' && imageSrc.dataset.category !== 'hamburguer') {
-        interval--
-      } else {
-        while (interval <= 6) {
-          interval++
-        }
+      if (arrow.id === 'left-image') {
+        interval = (interval - 1 + banners.length) % banners.length;
+      } else if (arrow.id === 'right-image') {
+        interval = (interval + 1) % banners.length;
       }
-    })
-  })
+      updateBanner();
+    });
+  });
 }
 
 async function  renderData() {
@@ -200,7 +195,9 @@ async function  renderData() {
 
         const price = document.createElement('p')
         price.classList.add('price-element')
-        price.textContent = `R$ ${menu[j].price}`
+        const priceValue = menu[j].price.toFixed(2); 
+        const formattedPrice = priceValue.replace('.', ',')
+        price.textContent = `R$ ${formattedPrice}`
 
         bottomDiv.append(addToCart, price)
 

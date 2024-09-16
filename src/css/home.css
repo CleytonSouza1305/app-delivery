@@ -390,7 +390,7 @@ display: none;
   height: 500px;
   width: 400px;
   position: fixed;
-  right: -400px;
+  right: -700px;
   top: 0;
   margin-top: 2rem;
   overflow-y: scroll;
@@ -403,7 +403,8 @@ display: none;
   top: -20px;
 }
 
-.header-cart {
+.header-cart,
+.header-profile {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -412,7 +413,8 @@ display: none;
   font-weight: bold;
 }
 
-.header-cart span {
+.header-cart span,
+#close-btn-profile {
   font-size: 2rem;
   margin-right: 1rem;
   cursor: pointer;
@@ -557,4 +559,93 @@ display: none;
 .trash-btn:hover {
   background-color: hsl(356, 83%, 42%);
   border-color: hsl(356, 83%, 32%);
+}
+
+.footer-button button {
+  position: relative;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+  padding-block: 0.5rem;
+  padding-inline: 1.25rem;
+  background-color: rgb(0 107 179);
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #ffff;
+  gap: 10px;
+  font-weight: bold;
+  border: 3px solid #ffffff4d;
+  outline: none;
+  overflow: hidden;
+  font-size: 15px;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  transition: all 0.3s ease-in-out;
+}
+
+.footer-button button:hover {
+  transform: scale(1.05);
+  border-color: #fff9;
+}
+
+.footer-button button:hover .icon {
+  transform: translate(4px);
+}
+
+.footer-button button:hover::before {
+  animation: shine 1.5s ease-out infinite;
+}
+
+.footer-button button::before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 100%;
+  background-image: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0) 30%,
+    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 0) 70%
+  );
+  top: 0;
+  left: -100px;
+  opacity: 0.6;
+}
+
+@keyframes shine {
+  0% {
+    left: -100px;
+  }
+
+  60% {
+    left: 100%;
+  }
+
+  to {
+    left: 100%;
+  }
+}
+
+.profile-content {
+  width: 400px;
+  height: 500px;
+  background-color: rgb(221, 221, 221);
+  border-radius: 6px;
+  position: fixed;
+  left: -700px;
+  top: 0;
+  margin-top: 2rem;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  transition: var(--animed-transition);
+}
+
+.openned-profile {
+  left: 0;
+  top: -20px;
 }

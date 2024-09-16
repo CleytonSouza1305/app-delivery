@@ -1,6 +1,6 @@
 @media (min-width: 1200px) and (max-width: 1919px) {
   .cards-all-restaurants {
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 3rem;
     padding-bottom: 4rem;
   }
@@ -33,5 +33,10 @@
   .heart-btn {
     font-size: 2.5rem !important;
     transition: color 0.3s ease, transform 0.3s ease;
+  }
+
+  .carrinho {
+    width: 500px;
+    height: 600px;
   }
 }
